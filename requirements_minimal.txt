@@ -1,0 +1,15 @@
+﻿# Core dependencies
+
+torch
+monai
+nibabel
+SimpleITK
+scipy
+scikit-image
+pandas
+numpy
+matplotlib
+tqdm
+pydicom
+jupyter
+pytest
