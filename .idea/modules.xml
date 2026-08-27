@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/tfg-vista3d-medical-imaging.iml" filepath="$PROJECT_DIR$/.idea/tfg-vista3d-medical-imaging.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/vista3d-tfg.iml" filepath="$PROJECT_DIR$/.idea/vista3d-tfg.iml" />
     </modules>
   </component>
 </project>
