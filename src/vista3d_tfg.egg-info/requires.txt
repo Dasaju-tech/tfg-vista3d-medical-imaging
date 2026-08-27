@@ -1,0 +1,12 @@
+numpy
+scipy
+nibabel
+SimpleITK
+pandas
+matplotlib
+scikit-image
+
+[dev]
+pytest
+pytest-cov
+ruff
