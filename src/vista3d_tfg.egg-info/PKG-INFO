@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: vista3d-tfg
+Version: 0.1.0
+Summary: Reproducible 3D medical image segmentation and quantitative reporting research prototype.
+Requires-Python: >=3.11
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: nibabel
+Requires-Dist: SimpleITK
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: scikit-image
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: ruff; extra == "dev"

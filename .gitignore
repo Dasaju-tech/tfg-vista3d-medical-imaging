@@ -1,0 +1,47 @@
+﻿# TFG VISTA3D Medical Imaging
+
+Prototype project for 3D medical image segmentation and quantitative reporting.
+
+The project focuses on kidney/tumor/cyst segmentation, volumetric analysis, evaluation metrics and structured report generation from medical imaging masks.
+
+## Main goals
+
+- Organize the medical imaging workflow as a reproducible Python project.
+- Run segmentation experiments using MONAI/VISTA3D-style tools.
+- Compute volumes, Dice/Jaccard metrics, connected components and anatomical summaries.
+- Generate structured JSON reports and human-readable summaries.
+- Keep notebooks for demonstrations, while maintaining reusable code in src/.
+
+## Project structure
+
+- src/vista3d_tfg/: reusable Python package.
+- 
+otebooks/: exploration and demo notebooks.
+- data/: local datasets, ignored by Git.
+- outputs/: generated tables, figures and reports, ignored by Git.
+- docs/: methodology and result notes.
+- 	ests/: basic reproducibility tests.
+
+## Environment
+
+Recommended environment:
+
+`ash
+conda create -n vista3d-tfg-311 python=3.11
+conda activate vista3d-tfg-311
+
+
+---
+
+## 8. Guardar dependencias
+
+Cuando ya tengas instalado lo básico:
+
+`powershell
+pip freeze > requirements.txt
+
+data/
+outputs/
+*.patch
+__pycache__/
+*.pyc

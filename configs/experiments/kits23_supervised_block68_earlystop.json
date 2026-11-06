@@ -1,0 +1,2595 @@
+{
+  "block": 68,
+  "cache_parent_config": "configs/experiments/kits23_supervised_block65.json",
+  "cache_parent_experiment_sha256": "07491a086a79ce908e6c6dcddd5903a061b0a4029da44eb3b38147fc3f39c5ee",
+  "experiment_sha256": "9a63d7c70b652e9f577737394687f56db447e8c34c85a9538a2d384bdbba183c",
+  "initialization": "fresh random initialization with inherited seed; no Block65/65b weights loaded",
+  "inputs": {
+    "case_00000": {
+      "case_id": "case_00000",
+      "ground_truth_sha256": "93b36b187639981d1473c30b60eb134c69ed207bbbfe6564225830db2d7e5579",
+      "image_sha256": "cdae5f3e0fbc7c98ab0430b3de42677abda2c1cf93ae0f86bd29fb8606688cb7"
+    },
+    "case_00001": {
+      "case_id": "case_00001",
+      "ground_truth_sha256": "a17e5ecdc4abc44a90ee277f9a61b932c90ee008b82c33fe407514a135f3edbb",
+      "image_sha256": "3b861149f13a1e8a0b7cae23f624e6c335f538ee9fb6ecc0625b2f062879bed6"
+    },
+    "case_00002": {
+      "case_id": "case_00002",
+      "ground_truth_sha256": "3966f0fdf015d396a5296d18b4ffbbb91f6c946035a352af581b36664800bf4d",
+      "image_sha256": "58fcd6c4e59c747c2927b4ff12305f553abd33454cff6533082706b946173201"
+    },
+    "case_00003": {
+      "case_id": "case_00003",
+      "ground_truth_sha256": "64e24f4cd3e90e57228a2dd4598244a208f58034f53f93f07019e99124368440",
+      "image_sha256": "63d267967cd02889415de2978903df36703cd7b5181e1226dc91d4832f7d5586"
+    },
+    "case_00004": {
+      "case_id": "case_00004",
+      "ground_truth_sha256": "a87e1e94009509dc29b85c5625dec53a153529f5cfc4eec5cd4a0df446f75be9",
+      "image_sha256": "a9af51c0435086ac7007570c8bc66ceb2a54ecfb7ec530639150635d326f8f1f"
+    },
+    "case_00006": {
+      "case_id": "case_00006",
+      "ground_truth_sha256": "f39f759a09802f890eeb7cf9aca4aecb7086d5a60121f4880ab10cc220621b99",
+      "image_sha256": "884cc817625dd041615a83ac378240675d599a42a1e0dd86e6fe88bd17f1c174"
+    },
+    "case_00007": {
+      "case_id": "case_00007",
+      "ground_truth_sha256": "17fb280af53524c1d547c5e3f6bfd28fcc533f4cdb83d54e3612516ea3295e86",
+      "image_sha256": "1261e949b46d05b0da75ac7fa73f0c6a51aa13a607d95d89fefc232b6b3ca20b"
+    },
+    "case_00008": {
+      "case_id": "case_00008",
+      "ground_truth_sha256": "7ac4f084ac03462bbfc9ab0d1e8936cfb9a32a95f4a1bdea1425760271d8d891",
+      "image_sha256": "ae2719417e36da5689aade422a0b94bd896c4b33d7897ff3ab7e30129ae119c6"
+    },
+    "case_00009": {
+      "case_id": "case_00009",
+      "ground_truth_sha256": "d854a3dc9568ba0ab9b0da23d8251beda0e2c5f722777f587dabb2ff2cd4e5aa",
+      "image_sha256": "492de10723f687b21b589ba1660615cac5eb4a8a785580a807be4eddca7c1756"
+    },
+    "case_00010": {
+      "case_id": "case_00010",
+      "ground_truth_sha256": "9886b2c9ec5dfa57a7564c14d7a856425be503474e8e6ce8a09202fe5c3e472e",
+      "image_sha256": "8e30ba81aa0422e2091b749b7c30989aeb102e01afcec826045162b437ed0ba4"
+    },
+    "case_00012": {
+      "case_id": "case_00012",
+      "ground_truth_sha256": "09636356304f22b7fe92de905bff0b8f289c56eaa064c6c9766d27918924cbff",
+      "image_sha256": "039c97ac928af4dbb4f959cbaf2c7403e1c9590321ffdb3f2d86a355261cd846"
+    },
+    "case_00013": {
+      "case_id": "case_00013",
+      "ground_truth_sha256": "e24264b25c7c832f1be09d3ee65ff867efedf3ee4dbd354353862cf3d20806e6",
+      "image_sha256": "77e7eef8f9935192f526246f7ba5de0f3ef569ab1edc3ff18e930db8968ed7f5"
+    },
+    "case_00016": {
+      "case_id": "case_00016",
+      "ground_truth_sha256": "a4aa2ffee821e2e6c9c61f93d4a8f0ea55f7c81b1d2b61fff62e01f26721932c",
+      "image_sha256": "9f741f28473b79ed7e53c5dcc5bc7d8872a6d0449dbb829a903eb05ae4f8e820"
+    },
+    "case_00017": {
+      "case_id": "case_00017",
+      "ground_truth_sha256": "18ca85dfca7d4c47b5e1b7c63ad21ef997a25ff9760a9e58953564784ebe9866",
+      "image_sha256": "fb7c9074168a4a7a258f8a300b4704af42e23a63e55027834fe1e44e55b473f4"
+    },
+    "case_00019": {
+      "case_id": "case_00019",
+      "ground_truth_sha256": "0fcbaaf6c96ac0c99ddcf8d57c1b871c0bb3697e315c786d00b81b21ebb6a430",
+      "image_sha256": "0b2cd96ac11bebc5f07e071398e273d418e13476d43e1229927c4c33fa5e03be"
+    },
+    "case_00020": {
+      "case_id": "case_00020",
+      "ground_truth_sha256": "6f8c99e7682ceab76133513424867bfc642b2264bda34768ad997f3613f4d79a",
+      "image_sha256": "0a9f9f55949dd5fcd59ca49c27662d9956d0bb87cbdab50c7f5ed347bd9e732c"
+    },
+    "case_00021": {
+      "case_id": "case_00021",
+      "ground_truth_sha256": "0292f2683b376043f478788624a8fdd924ce736c98626378fb897d4723991b50",
+      "image_sha256": "97562e5d35abe55192fbbaacd04f05171343ab440c5ff592c0fad729d001a9f7"
+    },
+    "case_00022": {
+      "case_id": "case_00022",
+      "ground_truth_sha256": "ca66ecc6587ff33d0b1c2795cdd4257847f856a13caa25b67e733f371aa67868",
+      "image_sha256": "365cb0082c4073eb7e60f7c759e8f6d7feef6a168f4f55edc2324b243518a452"
+    },
+    "case_00024": {
+      "case_id": "case_00024",
+      "ground_truth_sha256": "1506e5ddbc7342f3f352f7861159f85501182c804b96082d90c7149bf1d464a8",
+      "image_sha256": "b90540df3dd4ab0ec4cad772504d1be9471229c01a14f6cd7f0e9fb3a4523e71"
+    },
+    "case_00027": {
+      "case_id": "case_00027",
+      "ground_truth_sha256": "40626415d68849069702f1dec732c7d8299b7ed1af672c27da316f785b6911db",
+      "image_sha256": "7432ae26ab57ab2bebdce01bc420f79edac2ad6728351128bd59736816ee58e8"
+    },
+    "case_00028": {
+      "case_id": "case_00028",
+      "ground_truth_sha256": "96f414d4561ee1eff1873363259c7b6e0952c3508a05193cdafb25a6ed090422",
+      "image_sha256": "b41fdc5b7a7bb0a53a3ac25bbb875a8fe437a96622f6839201f8909af66612ce"
+    },
+    "case_00029": {
+      "case_id": "case_00029",
+      "ground_truth_sha256": "a8bc0bf499a2e74906d9c80fbb13a7bbacf0f6d42ea22ed2802df80c57cb2b62",
+      "image_sha256": "657fdb4c2ef5a66e4580e64bdacbaf9a0e9034cb3fd390b28337081cd3142e45"
+    },
+    "case_00031": {
+      "case_id": "case_00031",
+      "ground_truth_sha256": "6441070d4624f8ddbeae70f5aed2a0c1eabe4b57b1c9a43f684c94b2c2d15997",
+      "image_sha256": "8e4baf209f156e6319cdbd61efdcb8bb518a9e863d86cb67ef43fe53cd3cc156"
+    },
+    "case_00032": {
+      "case_id": "case_00032",
+      "ground_truth_sha256": "7d5e320367dfd744c6819b797ed036210b1002e7db79247d207b19b1aa8996c8",
+      "image_sha256": "00f43320501a2bc31b13176add47ae81793f9097df47c750c4ac4af9910f730d"
+    },
+    "case_00033": {
+      "case_id": "case_00033",
+      "ground_truth_sha256": "3c08ba43fa86869c5adc7df8e141b0161b6dc07c79472f3b65181379843b19be",
+      "image_sha256": "94524a641d762fd1692811504f6276a970f1738de4641683453b0b5fd346a3f2"
+    },
+    "case_00034": {
+      "case_id": "case_00034",
+      "ground_truth_sha256": "746bdf10766358ea6c9fc42c5b24e4c0589fdca86386cb762f5e080d57ae4814",
+      "image_sha256": "55213482fc646bf30a736fc1e8620a0925b30030cbfbbd6488d47bd059f313ac"
+    },
+    "case_00036": {
+      "case_id": "case_00036",
+      "ground_truth_sha256": "e6f2537fad1d42bb7346484d3e85ed0ea162c370dfbd61a816ba870d6f4db58b",
+      "image_sha256": "e3a61271d58bbb2ebe5c9018ea7246bad81350bcc4bab0c7ca758f8ffe6822af"
+    },
+    "case_00037": {
+      "case_id": "case_00037",
+      "ground_truth_sha256": "affb7d353494206b550dd1cb7a13a89d2faa2479514cb07f2357204e571fbd24",
+      "image_sha256": "31b95c03f5df0527f0943db956904a70e6c9cd779df3c6f9755858abeab4f64d"
+    },
+    "case_00038": {
+      "case_id": "case_00038",
+      "ground_truth_sha256": "59c64e5645aa82b06ca725dc7f987658caa5d677953548797bbb3f4192641e85",
+      "image_sha256": "0050172529386ea12ff21b2871e2afa0bc917f8ec2b8fc0fc5e9c0d2e298d6a3"
+    },
+    "case_00039": {
+      "case_id": "case_00039",
+      "ground_truth_sha256": "23ff24cc9d8f425a5c46db6735a3d919b1c907bff9559c129a3713eb830ebb36",
+      "image_sha256": "ba31bba727acdff50aa43244d17872c75cdf69ad6dc493e4a52c36c44e953e3c"
+    },
+    "case_00041": {
+      "case_id": "case_00041",
+      "ground_truth_sha256": "681189db32e2874770f3afaf23364a3bdffeecd69c811c1927253f36b072e98b",
+      "image_sha256": "bebf5e542eaa5731c71717b7654065fa4313c551c1cdf57f7cea426ceff028c2"
+    },
+    "case_00042": {
+      "case_id": "case_00042",
+      "ground_truth_sha256": "1e8cd9aa129dc6448ff36ffd8dc51e325c38660dacd26f8ce43811b7ed489df4",
+      "image_sha256": "07c3503b756e9290261afd92f4b51b141c3559ff6ea42a670169ff726a713f0d"
+    },
+    "case_00043": {
+      "case_id": "case_00043",
+      "ground_truth_sha256": "bdd90320e1c6ab929e4c2c68820c771a512d0360bcc5a7bc36a7b19f1677de19",
+      "image_sha256": "e3780331e973be89132aedc51c51995e8ca729391d52e194f25f7cec08a659a5"
+    },
+    "case_00044": {
+      "case_id": "case_00044",
+      "ground_truth_sha256": "8e79ea88a9a0abd0c271b6826ab917431c20d45d4da907eae83b46eaef7449bf",
+      "image_sha256": "4d7f8fd27cb08c8b935663757f864b3bb4113eb4af5b8ecdc9dda41ab48cdf3d"
+    },
+    "case_00045": {
+      "case_id": "case_00045",
+      "ground_truth_sha256": "5964fef7a14e174d1511bac6cab446449e51be9245c706977dd6c34f7f596ac3",
+      "image_sha256": "ad4ddba4d11c3272dac7a35e2d4414a872b215fad2c85be7af64d7bd0caa80c8"
+    },
+    "case_00046": {
+      "case_id": "case_00046",
+      "ground_truth_sha256": "3416bcbc18e1ee3915fbbfd9ff5b597691ac45551ff34b4be9f4042bfcd7b449",
+      "image_sha256": "4f83900ab55be64e53d2b88fab5657e5d92fc10ecf30a48770615e8d2b4e0a62"
+    },
+    "case_00047": {
+      "case_id": "case_00047",
+      "ground_truth_sha256": "5f3920bb54485ce98b301e5cb3226bbaceba5179214f266c9a63d8efa2dd2c8b",
+      "image_sha256": "83322cd75cb52290e64edd99dc7e23c616b8e31c62fe238f5f16f45bea6d477a"
+    },
+    "case_00049": {
+      "case_id": "case_00049",
+      "ground_truth_sha256": "bd779260e3d6b8780567e8f3cbd96b05af75361d863621461cf379ab4dad858d",
+      "image_sha256": "d0d449e4ca322aab438a34cebe0eb47b0ea68557593ef58f1912dfeac3c5fd32"
+    },
+    "case_00051": {
+      "case_id": "case_00051",
+      "ground_truth_sha256": "2a437f96b3f0f1dd500b082db4d53bb333e9e3a99cd6cc449fea7ebeb580f44d",
+      "image_sha256": "e52fc89a7156d19cfefcb7f8794c01e1673a5c77218361a3723d0886f53cb3fb"
+    },
+    "case_00052": {
+      "case_id": "case_00052",
+      "ground_truth_sha256": "66bfbcf51b731ddd808aa306a310d8c62340a611f8298348d9e3a47eb600831a",
+      "image_sha256": "e4f32880944933ce2f733cc75bc1a5284b0a846ed77161e995fd3d277aaec88a"
+    },
+    "case_00053": {
+      "case_id": "case_00053",
+      "ground_truth_sha256": "3dc371962c4bb4c68629a56db573526d9ee7286ec27ce1d55ba9e2e6d5b98fba",
+      "image_sha256": "ed3821653b378580bee47a0b975ba8a3d659b95408a6010c8159fa9ecd6ab23c"
+    },
+    "case_00054": {
+      "case_id": "case_00054",
+      "ground_truth_sha256": "e6e149a54d40a9c43883d6cffb20528d3771f03b6c854912b8ad6d9d78a178c8",
+      "image_sha256": "2e1670b9a7d9378c1e7d68242a08383d00c3c0755b74d5b7a46552656f4864c0"
+    },
+    "case_00055": {
+      "case_id": "case_00055",
+      "ground_truth_sha256": "db04ccffa7a33d6fd3567e4bacc7b034573359835e461a42fb6f53eb41723980",
+      "image_sha256": "bdee52e4c1b3b789142b167b77257e394d8db579e26724488dd4dc1a2dbf0959"
+    },
+    "case_00056": {
+      "case_id": "case_00056",
+      "ground_truth_sha256": "b6f46c33a82ea097e0bc06fe53320419c189a3fcf8bed341f90d60ead6ac7d14",
+      "image_sha256": "bceeed3355ab099678d5ef009cb8a0258eac51fb6fc2530017fe702434c46140"
+    },
+    "case_00057": {
+      "case_id": "case_00057",
+      "ground_truth_sha256": "4b9b83fa1989f6dd880c2c5718101f53448d08d0a5e589d417a49b417c1e9832",
+      "image_sha256": "e7f73fded2c62e41d3b835bd8d65c075dd0b930347e16c5a55b854c6493ebdb6"
+    },
+    "case_00058": {
+      "case_id": "case_00058",
+      "ground_truth_sha256": "e2d30a6c065a132555bb71c6b9f920eeecc56114a76e82476952a50123edf493",
+      "image_sha256": "6909f6f33d6ad42d48a04b2a392af6ff05431b5021a4aac0d9a00c1dde80530b"
+    },
+    "case_00059": {
+      "case_id": "case_00059",
+      "ground_truth_sha256": "b00c591185c7a363ca6266f65e2d27ff4766fca58e9db5be5825d55d043ef06d",
+      "image_sha256": "67a94a63adcee23ee66bba448d3229c47a1d33029524dde26dfa7d8fa1c2afae"
+    },
+    "case_00060": {
+      "case_id": "case_00060",
+      "ground_truth_sha256": "bb9ab11021ce56f80c19294cd2f7e3e1c88c8430cbb8ce8c56665a269a64d604",
+      "image_sha256": "f4a8660114ba14a05f354d37511b50a0e6abfc26d6e0409b7b1bf6c2a8147fdd"
+    },
+    "case_00061": {
+      "case_id": "case_00061",
+      "ground_truth_sha256": "abdfdc06322c4e04d00f71549dd025154ae0fad11fb77dd1656f014492c2fc3e",
+      "image_sha256": "95eb42261e22f552e2b6bda39c2d72e3fbc376983d6bf9485122e968609f2cbf"
+    },
+    "case_00063": {
+      "case_id": "case_00063",
+      "ground_truth_sha256": "9b556629c169d3837900b4d5512b201dd190e7769ff104f2cd62d20aa989ede2",
+      "image_sha256": "0e27c6255a9305feb5bc4e95f48eb36c10c4d35a89acc0f3838d0629f314304c"
+    },
+    "case_00064": {
+      "case_id": "case_00064",
+      "ground_truth_sha256": "e61603893473b987be2c3be171c520bad145545071a1b87231978ba53576960d",
+      "image_sha256": "d8de0bdfa099c9cd4fda5a69ed188f57cf01849e676d31473f5f0df4a83c832d"
+    },
+    "case_00065": {
+      "case_id": "case_00065",
+      "ground_truth_sha256": "905033c60d3c647b625f06f542104070e408614760cf064b4bbc7f83780072e1",
+      "image_sha256": "6ff1b71bd873306c88e90fa463cbd740bbeb79cb5c3bc8b5089e3fff81622e6e"
+    },
+    "case_00066": {
+      "case_id": "case_00066",
+      "ground_truth_sha256": "04fc1ff9bd600ae42f72f1a3cf46432edb2e6cdb03a2c8950d0513864c8f9d66",
+      "image_sha256": "d8fbf08d1628afa013c3b0050b6f7b60ff5e184c295bea2ee5b0d173459ed82f"
+    },
+    "case_00068": {
+      "case_id": "case_00068",
+      "ground_truth_sha256": "11546be7fa5f2c8442f6470fd4ce5a7974959b9457ecfad23b90b536f12edf79",
+      "image_sha256": "274e408499a644791a18e8287b10b8124932d28ad5ae6f80f3fd9a6cbf94d48c"
+    },
+    "case_00069": {
+      "case_id": "case_00069",
+      "ground_truth_sha256": "7170188517e02aab9627c2bd8a133c0f4399b20f878f174e39a6080f9aa9dae5",
+      "image_sha256": "f56e721684cdfb9d43e7860dd002e70858a33b0549bafe8c21be987c193c3592"
+    },
+    "case_00070": {
+      "case_id": "case_00070",
+      "ground_truth_sha256": "3fd031a401cefbc6fb3410dbdff581281c6676f4c7c75095cfd041529cecc5df",
+      "image_sha256": "18025b039e3a098437eac420ef50d2fa3cb1ac879a78ae339037d90ef5330126"
+    },
+    "case_00072": {
+      "case_id": "case_00072",
+      "ground_truth_sha256": "2390a58a531c01363b6a52ead1b2e01be4d84e375690dcf4eba012ed810a6c82",
+      "image_sha256": "2be7605792b5cc9c3303d1ccd4547da8b5839f75a3296ffc8826668de180cc56"
+    },
+    "case_00073": {
+      "case_id": "case_00073",
+      "ground_truth_sha256": "8cf0ee7326a9ef6099f8a6f78e7dfb10edddb108d22fcf7b8451317a4395f581",
+      "image_sha256": "54da755f9b760abea084d3cbe31a6279c3fc254a68f99733b2df19709c7b22f5"
+    },
+    "case_00074": {
+      "case_id": "case_00074",
+      "ground_truth_sha256": "db0fd6ba61d2b1c9979798ff1390e3ff2bd79e8ea4bc2c0b8da328d125c6dbff",
+      "image_sha256": "1eb8693c31ac80dd360a3f91b610a60136ad276a5b334545c3f8e64765de5f17"
+    },
+    "case_00075": {
+      "case_id": "case_00075",
+      "ground_truth_sha256": "3ad19ea44676ce3b5d000fc29d3c68cb40abf1eac66ef740f6b1261c79c30181",
+      "image_sha256": "44f3ac4045ce34305eadfc48af7f11782c7699ed986d71089ec82f744cdbb64e"
+    },
+    "case_00077": {
+      "case_id": "case_00077",
+      "ground_truth_sha256": "9f88229187d4c5bd13ec3ac65dcc2deaf6827932ac275fa7c80246cb351b6bac",
+      "image_sha256": "64d7f1fb5be850c6b30051e5244a7cfdfcdea1e185f8f8bea7e6056f8f1bd0c9"
+    },
+    "case_00078": {
+      "case_id": "case_00078",
+      "ground_truth_sha256": "9a45390a88694dc9771695df24931ab43f6cf25088f9aabe495c06a777dd3048",
+      "image_sha256": "08563035343423b6011eddfe64e16447b2e9b8a62fbfffc0be97103a10664e44"
+    },
+    "case_00080": {
+      "case_id": "case_00080",
+      "ground_truth_sha256": "9b4487b8f2e8cd821c417489586ce4a85e701698154294d98539ca45522c2bc6",
+      "image_sha256": "53d2195627a643feeebe65087baba6169af0f1707a26de5f7ee13943d3a4a0fd"
+    },
+    "case_00081": {
+      "case_id": "case_00081",
+      "ground_truth_sha256": "f05cb18fabc7e80f5dfdc265574eaad3f1870a66ec087a3ad28f0b7d55441c35",
+      "image_sha256": "78bc51ca3da42af7ceecc094b0709daf20925d8558a4175feffa31fdfcbcefc1"
+    },
+    "case_00082": {
+      "case_id": "case_00082",
+      "ground_truth_sha256": "8276a8b0a4f610a81232617e59006334e6c901a6449d2d62127d2de9af6e0282",
+      "image_sha256": "321ff379b9ee8166faebe129184ca75f8715bed42ff10edd91001a8a3d3fd8b7"
+    },
+    "case_00083": {
+      "case_id": "case_00083",
+      "ground_truth_sha256": "a53607023a9e5316dba7f4db377fb13849facc090130ede81980a1c10fc56097",
+      "image_sha256": "7748e2dc080c6f9df479e7db2b03d17c7b32e62ee081741fd5d0d0786cc1fa23"
+    },
+    "case_00084": {
+      "case_id": "case_00084",
+      "ground_truth_sha256": "c822dee77250eff4671bf97718a2d4f4989b39e2eda5e68878c7b8735138b441",
+      "image_sha256": "d2c54a087dc9b2e1229a326ed12055dfbee596cf2bc7ad8a247b9fde540738d7"
+    },
+    "case_00086": {
+      "case_id": "case_00086",
+      "ground_truth_sha256": "9cb9b8b82a90b4d8a0af353f2e0e726f8fd1e64b08a798cc3e3c2ac0b2d75c8a",
+      "image_sha256": "f05018951244e877cc6cb3aa842ed2287a32bab86b4cd5e8564e0ce6210930d1"
+    },
+    "case_00087": {
+      "case_id": "case_00087",
+      "ground_truth_sha256": "cdf8cbb56bf97708e784ae1162931ee0e563fc8d31861cd763b801f2a639014b",
+      "image_sha256": "f4658463b4480b411d7b5e283294a828145acf95cef70f9e35f88161167a5298"
+    },
+    "case_00088": {
+      "case_id": "case_00088",
+      "ground_truth_sha256": "fe1d9bd3e8cb581df6d06d33d76a475c5a0c12026ae1548f49a8e345ea17ada6",
+      "image_sha256": "393684ed2220f0e030c09f3ed36e832740e5e9a8c98bffad7480e2d60e79d152"
+    },
+    "case_00089": {
+      "case_id": "case_00089",
+      "ground_truth_sha256": "03f278a2138392a16b0c036fb604d52fbc7ae0a2366cb0fed5949060c53f4cb3",
+      "image_sha256": "3fed1d4f01ff7e04d618fd48000937ea455aa32bc8b1d693697b2e258c95dd40"
+    },
+    "case_00090": {
+      "case_id": "case_00090",
+      "ground_truth_sha256": "9e564d8aed1a224fff4a815f3ef4f7eb8b7f099d7e5ebb95638c951a53433bf9",
+      "image_sha256": "5bfa1c15f922bdbeaffa7cd12c3f9f3cb7b6100db29ec7811ead40e977bb490a"
+    },
+    "case_00091": {
+      "case_id": "case_00091",
+      "ground_truth_sha256": "8bc7af7a8234c0705bb09b899096ce505b184c21f45adf72c610cfb2750f4424",
+      "image_sha256": "56f4a7e6531497523448ab4b2c23f61cdb907880161ca349e1cef88e3a3f31ac"
+    },
+    "case_00093": {
+      "case_id": "case_00093",
+      "ground_truth_sha256": "bb37b246c3ace2280fb85d58699b86d764212ae6df17b0d2e79b6388755d96e6",
+      "image_sha256": "023bae3d476a6993ed654e9a7af46c9b659a6aa6903d2cb3829af5533e5ba42c"
+    },
+    "case_00094": {
+      "case_id": "case_00094",
+      "ground_truth_sha256": "988638762c8aff27f770f6143f97749129e68c89750c3d847b72202f7a41a4d1",
+      "image_sha256": "48802f2c1d197f63c9be459d2402c9823ca9387ad4699e482ca3a2da4d8b2c6b"
+    },
+    "case_00095": {
+      "case_id": "case_00095",
+      "ground_truth_sha256": "f51eefee3109edd55d816727bbe2a851e27bcbe5055112c1b97f1f74c0ae0fbc",
+      "image_sha256": "7908ff06fd6c82652ad1591b650c71529f616bf4f904fee75e6604dcf5e3a1e2"
+    },
+    "case_00096": {
+      "case_id": "case_00096",
+      "ground_truth_sha256": "3ab8156c917b70b957710be8dc09e2d189299273371eb1fbb4806d91b2e2b1c7",
+      "image_sha256": "d0570233199a3c59ff8e049f98732d3990564bf45ff67e28702709feddfd1085"
+    },
+    "case_00099": {
+      "case_id": "case_00099",
+      "ground_truth_sha256": "d4e415781b2abd8fdfe1eb9a6bc1dc604870a43512e8864dd3c58792b3a2ab41",
+      "image_sha256": "48d45ad59be0e4ca0a51531a74ffdee5ce530119ce0acaa406d08d8a66062063"
+    },
+    "case_00100": {
+      "case_id": "case_00100",
+      "ground_truth_sha256": "1bf0fd7e3ee9cffe3f8143aa0b34f9788b4c4c9bb5bcc154384c2aa4a22c3dda",
+      "image_sha256": "2391adf361de6377cc4271e4180d2be74b052303833bd60ad26356be9cefcbbd"
+    },
+    "case_00102": {
+      "case_id": "case_00102",
+      "ground_truth_sha256": "42116189e498eab82fedef18fbcacd6b9336ce8c79d7ab1966e533a68277d3f7",
+      "image_sha256": "ce1f4182738e0cc5b36ad02efd719b805699b8f5e647e7ca12aac2fe9147c4da"
+    },
+    "case_00103": {
+      "case_id": "case_00103",
+      "ground_truth_sha256": "e3ba11bda484deeb93c179a49eb96276f7faf7c7d425770319ecf65ef6475c19",
+      "image_sha256": "0b8a27bd9af3a52f55c5a17fee98043bbbcc997c1a66a356984d3d0d4ee66375"
+    },
+    "case_00104": {
+      "case_id": "case_00104",
+      "ground_truth_sha256": "9252d28cb02ec1cd544568aa5452ca8c01a0ce478076bc84eab613e58d964ac2",
+      "image_sha256": "16b1c9224a730305486c5a741f8ca04cd82852e3ba14850cdc53fe07ec96ec5c"
+    },
+    "case_00105": {
+      "case_id": "case_00105",
+      "ground_truth_sha256": "a73b144723ecc93fa0b7512bc66402af9cc174ae53bc5420a4538fe884be18f1",
+      "image_sha256": "e4d2fe3b5af221ccb405e8e892cd8c03077f926c156ed23b054c9b7b9badd886"
+    },
+    "case_00106": {
+      "case_id": "case_00106",
+      "ground_truth_sha256": "a5972821fc98f57292a07baf5fa6c1098c567fe21e59b6187a46a52e516e15d2",
+      "image_sha256": "384c34749a9c849a2e0d4bf70335ba15696f79e53b136cba21f18d44d65e34ca"
+    },
+    "case_00107": {
+      "case_id": "case_00107",
+      "ground_truth_sha256": "d920c0a03299e78ced3392f7651ee5ab2a455e249979ee6ae95abbf003b0f4f1",
+      "image_sha256": "1c1e8da81cb453a4a4da056f056302a97b51bd7f34cfd254d15d80d49540848d"
+    },
+    "case_00108": {
+      "case_id": "case_00108",
+      "ground_truth_sha256": "f8a966ff97c59738477aab160c06e8656cccd46923db2163f96b820f2e448b41",
+      "image_sha256": "543e722f44db15e7452bfcc39d97acf5803952344c7a3a7ae31d4c4577bd3aa0"
+    },
+    "case_00109": {
+      "case_id": "case_00109",
+      "ground_truth_sha256": "f78cc8c074b3eb508f631d82f32d742b25445dbcb55ea93470c9adc2dcf22ab1",
+      "image_sha256": "7539f075fbcc4dacec246cef7e0e4e879a06a93d2dd98bfebaaa6c8930895a77"
+    },
+    "case_00111": {
+      "case_id": "case_00111",
+      "ground_truth_sha256": "e6516d26404d64e6b1b871e9da50a6b9f95dfefb4a654412d2fd9c1e6e6f05cb",
+      "image_sha256": "4acbc48b42d3a56e0eab6dd7b6537b819f58ffebbad6043b76245a75d4176cda"
+    },
+    "case_00112": {
+      "case_id": "case_00112",
+      "ground_truth_sha256": "07f8ffa88068248c468a3700bcf52789230e3b60dab28c0078e3aaed6e662b20",
+      "image_sha256": "935e66df54397a86338502072f2212fa25d51f648669e16ab7733abbd19d8241"
+    },
+    "case_00113": {
+      "case_id": "case_00113",
+      "ground_truth_sha256": "44497577ed06146dff214ec9f1c2ae26db33707933a6a2a292b8bd0c413c76eb",
+      "image_sha256": "ea0aa6393a3bb4734c152730b605b595775646807edd953d36714b9377300e61"
+    },
+    "case_00114": {
+      "case_id": "case_00114",
+      "ground_truth_sha256": "5f0c49dcd0e47c63c3e03c9777fa7f2c2fcc3daf3c443ee9b721db82e939fd01",
+      "image_sha256": "09a8723f8afa6a7b811e32bccd8643b2c4fe9efd9f164085cde62757ab7bd0d8"
+    },
+    "case_00115": {
+      "case_id": "case_00115",
+      "ground_truth_sha256": "3d111017e695b8201bba7f9d29fd1ed9a189fee36eb6a4e103848c15d7f88ef1",
+      "image_sha256": "bbf592e97e02fc0c611db54c53080d4ec35981f4185fab0e89994e4ea2a438e8"
+    },
+    "case_00116": {
+      "case_id": "case_00116",
+      "ground_truth_sha256": "9348876d66f9728e2c7671e2499f823d6fc29b346a719caf95fafb00b9d73449",
+      "image_sha256": "525f60083da40205dda79a4cb1298b9b97a70f6bae26f20cd421cd67caf81546"
+    },
+    "case_00117": {
+      "case_id": "case_00117",
+      "ground_truth_sha256": "af6976fc8fbef358b8310a931dcba0c64d33107233457748d8d8d10734d9c386",
+      "image_sha256": "37e270565cae64838698ed6dab7f0a23867901e69d8673dfa0c083efb36cb463"
+    },
+    "case_00118": {
+      "case_id": "case_00118",
+      "ground_truth_sha256": "a5af02d1abf76156f3fd01338dd702ecaf5d2d780706c615d692a7ba2f303e93",
+      "image_sha256": "46deca3f230a031ff2fb5d03b0922a382e67e5dde0c7d387c442cb89084d2283"
+    },
+    "case_00121": {
+      "case_id": "case_00121",
+      "ground_truth_sha256": "62b8f9817b363234376598f40955423084e7fbf6deb0f73337575aa10237aa95",
+      "image_sha256": "3fe7568dbf5446747878ab9ce27760cad28b4cc043295457a5869469e34cf914"
+    },
+    "case_00123": {
+      "case_id": "case_00123",
+      "ground_truth_sha256": "61b189d18553a1a09c51d8a118e564a81f5117fb7bb6b60ecdcca1f9df2ec5c7",
+      "image_sha256": "be132ec55663137296e74c7e8f42df74a6676c347c05c2a0afb2b6c512dd31c2"
+    },
+    "case_00125": {
+      "case_id": "case_00125",
+      "ground_truth_sha256": "665c1a1efc7480707df08ff419e0ac9a1dceae0851935ecfd2d30ef555227744",
+      "image_sha256": "7025178cb9775c773dceeca725b5cf1354c9547786483bec867044d40ae7d069"
+    },
+    "case_00126": {
+      "case_id": "case_00126",
+      "ground_truth_sha256": "581389a2c912f2ddc7772cb322d51699ddbf629e88e00856919dade0c379b93d",
+      "image_sha256": "af6b9438df4a10b5561bdf9072b806189784e2ece7b38e2f1440ad2fdd51b9ac"
+    },
+    "case_00127": {
+      "case_id": "case_00127",
+      "ground_truth_sha256": "2d06b18689d9c15942772f95bc9932e23d63a2d3f0a8cbc2e7dbb9d83348ada2",
+      "image_sha256": "bf94415e76b8bf0a28b5569afa08e402718ca902ad485d0ce4267b47919502f4"
+    },
+    "case_00128": {
+      "case_id": "case_00128",
+      "ground_truth_sha256": "9d80c8d809c1580d72ab0418873d8e71f312bcf6c0c85c01a4aa5d78c3b9364c",
+      "image_sha256": "44aadb43ffdfca340cec735f990c875e407dbcee7a73d2bd184f401b7f6eb05e"
+    },
+    "case_00129": {
+      "case_id": "case_00129",
+      "ground_truth_sha256": "9a3f1b86ff022171ce9d11aaac503e14968ef4ef31ffe3afdef1d9411b0bf87b",
+      "image_sha256": "0d7b29ba62bab0a031a98fec6651230e7dfc8d3fc599e3d2201dfe6ce114f245"
+    },
+    "case_00130": {
+      "case_id": "case_00130",
+      "ground_truth_sha256": "285e5ada4a8f3aefb7a7698fd01ab953ae11c98baaddf6bb8b2a7bcbe9953325",
+      "image_sha256": "5d8c6a9f58ea6644879b2ad760560e743a5f86a4cb2b3682f5e1e0cbd4f5dc69"
+    },
+    "case_00131": {
+      "case_id": "case_00131",
+      "ground_truth_sha256": "d1288e0b64d7816851c20b36c5e4955c489d5ba6131c7c6b78466c26e070645e",
+      "image_sha256": "cb146cf250f9607c325ba34dd21d7f126121045dfcab4d409e6c934de997d82e"
+    },
+    "case_00132": {
+      "case_id": "case_00132",
+      "ground_truth_sha256": "39ea963c5373f6d3ef42e727c9299e5a689709fefe7bb6ad475bb212578adcc5",
+      "image_sha256": "8ed0c03970a1e6681a63f3de19d09e45ca84d90290877baa7ed6c82a9efcd4fe"
+    },
+    "case_00136": {
+      "case_id": "case_00136",
+      "ground_truth_sha256": "056369058d521825de0f5c198cddaaa8fde95307221d452b03658ad52e7b22f4",
+      "image_sha256": "3e294c34dd7099d849f8a7d5259864d4f8a40a467f3dcedfc458ad93a6c4a6c0"
+    },
+    "case_00138": {
+      "case_id": "case_00138",
+      "ground_truth_sha256": "95bf0e184acf6ba60dde3f8936b6051c4414694a4ae3c26d16ace7c8472e2bee",
+      "image_sha256": "7b7c931a5f23f2db73739064109ebba8c206c7e13681138e8adb74ec7c243b6a"
+    },
+    "case_00140": {
+      "case_id": "case_00140",
+      "ground_truth_sha256": "8f0eb743356411643aa5883bb7bf6beba028b133a6a9b66c40ad189e20220d89",
+      "image_sha256": "34d5740ad5dfa4f638a531e12b880b99add5270ecbd1a7ac42c98a465b8a4142"
+    },
+    "case_00141": {
+      "case_id": "case_00141",
+      "ground_truth_sha256": "3d7411accad7742a4d1ed0d7c5fbf69c9dd76d723d91932be1273abcefda1d07",
+      "image_sha256": "02595d667b7ac5c714200dca7ef4bb6f83d95e9c3882d5e1f7605191986097c3"
+    },
+    "case_00142": {
+      "case_id": "case_00142",
+      "ground_truth_sha256": "28f95cb2853dafa4ba5d27fb6811c11179794a21a281f1673526158838764f14",
+      "image_sha256": "d11ef32d69bbb5d455f825a9ae7d36d9d5aee00e4aa0ace4b0aa2c6d0b96c419"
+    },
+    "case_00143": {
+      "case_id": "case_00143",
+      "ground_truth_sha256": "1334cb62dba0e47898a894dee13a3b3c91a0e05bf630990428110cacec25e4db",
+      "image_sha256": "b9780eb096da190e3327b60d85eee9d6f11ecba54613d4c62254fa03ecdcbc6e"
+    },
+    "case_00144": {
+      "case_id": "case_00144",
+      "ground_truth_sha256": "2869f6a1711f137661cd288898882d13253719c00baba09bd376dfa5b436452b",
+      "image_sha256": "2d4b5d233f28e4a9bcc01e9928fb51926604177a41985bfcec8f9d3d2d2fd779"
+    },
+    "case_00145": {
+      "case_id": "case_00145",
+      "ground_truth_sha256": "5ab5418068d314121e925ed8a70d60f4e953a27a1bda24b163db2e7aac2b2c76",
+      "image_sha256": "9657b6eb9974a9be4f45bac54e877c360ca5016cfe3ae09a4fa4ff8e645d319b"
+    },
+    "case_00146": {
+      "case_id": "case_00146",
+      "ground_truth_sha256": "451bcd6c915221c350edd5a96dd82a1e1678ead19467c15f1fbe2c8be35258c5",
+      "image_sha256": "1d94dc738a69e50c72cfab4203452eaf4771b30ac17ed818e9c0e3d140b155a2"
+    },
+    "case_00147": {
+      "case_id": "case_00147",
+      "ground_truth_sha256": "1a3842493a08a135056de285b1c59e9936b0a66f4f06bddc0059fb53c635f659",
+      "image_sha256": "0f37a518fa0141a332f6230aebe7deacb55adfcb32d6a40c3b6171b0a007bc05"
+    },
+    "case_00149": {
+      "case_id": "case_00149",
+      "ground_truth_sha256": "5dc980b777d260842116925f7bce5f3d3ad7de65a3a259dd7df0f38f86214aab",
+      "image_sha256": "c4fd6735554a08d6c10242c98116d054d16b8e8483cad1985ee661af2b4ad204"
+    },
+    "case_00150": {
+      "case_id": "case_00150",
+      "ground_truth_sha256": "5ef0d1665df7ed7d360c63e1c97e8b0ab3add1591f3af55d8717bf0bde37f9b2",
+      "image_sha256": "35b19b44daad521f9de69b0eb9e6f5fdaaad33af9139415249247dc23d4e3d16"
+    },
+    "case_00151": {
+      "case_id": "case_00151",
+      "ground_truth_sha256": "d7d9096fa6e75f1a4e22bdb91f6085ad544dc58bd3af0885155463dae0213bf4",
+      "image_sha256": "26f294ac7284e56a477e4a05579729cfd2364d39731c7cdf5a9e85a53960b7af"
+    },
+    "case_00152": {
+      "case_id": "case_00152",
+      "ground_truth_sha256": "80a75952a6fb8752179dee5483ac0bec3e56b62a226e2e5c420e6249344056ea",
+      "image_sha256": "b407f2d86257173d4ade726b97dc53853a80d88b4226cfde330b56d1fd6da71b"
+    },
+    "case_00155": {
+      "case_id": "case_00155",
+      "ground_truth_sha256": "6c10e8f1d73adfa32b17a1eee92bccb3d3764d787e7e84d827453dec565c94db",
+      "image_sha256": "8f5e3dd8e441e1f81a16ff3ff6144973e5e9056b1ec3c79ed31de2d71120a296"
+    },
+    "case_00156": {
+      "case_id": "case_00156",
+      "ground_truth_sha256": "509475fb6f411c3d5e88bbf316799b4aeb5570e12c71d85b9b0feee7377b8331",
+      "image_sha256": "a5424e47cd0a55d041abd22636ebcf01c718e9df918db967f78fb91a98a7c90a"
+    },
+    "case_00158": {
+      "case_id": "case_00158",
+      "ground_truth_sha256": "5adc52d4bb046ec20873beab467669b4f8337d592deae156ac6545eb3a301467",
+      "image_sha256": "e2abf83f652dd3667b108c84521d30bcf0c55befaa9ecd734128902eb51bde59"
+    },
+    "case_00159": {
+      "case_id": "case_00159",
+      "ground_truth_sha256": "7c4338bdfeefacfd67d1afde40a6d7b922ac147b136bf736cc7e4897b9c3a35c",
+      "image_sha256": "8ee241aaa90c58b817bae1511437b73dcde02f5639e57acb0867eebb75dba233"
+    },
+    "case_00160": {
+      "case_id": "case_00160",
+      "ground_truth_sha256": "571e0b575313da33e5c567fd1bbe381d03be5c9b80abbf951e4eaa8f95f7883c",
+      "image_sha256": "94b8a15327097349f4f5afce36c7d0f5228dd7e7045b07c6325930a79d5ecd9a"
+    },
+    "case_00162": {
+      "case_id": "case_00162",
+      "ground_truth_sha256": "50b7c43137590d14d3860a777a17bdef13e065494858e66782e594423a065a60",
+      "image_sha256": "1ff33933b02751241021af304a6e9c0f2e937aa9ed09f26bc62cb0c96a316444"
+    },
+    "case_00163": {
+      "case_id": "case_00163",
+      "ground_truth_sha256": "7ae49c044aa9ed0d2c0037e824ff70f12ae3e5659849ef465a768da1760a7e86",
+      "image_sha256": "9adaeba960c7ecdcae5a2fb0ce0249c71ee54ff2d9760f8470f693a0d0489957"
+    },
+    "case_00164": {
+      "case_id": "case_00164",
+      "ground_truth_sha256": "4f494983c28cb30508b71469c8a1bccbf01dc5148726389cc1bf46a0efcb0ee1",
+      "image_sha256": "fdca69677341cf4750386d3c2effb407594504760ea26e5e1230f02988c40bf9"
+    },
+    "case_00165": {
+      "case_id": "case_00165",
+      "ground_truth_sha256": "6c44cb4b5faf63a19d9000a0a1b16ac599281ca5840a203c92c023e5d6045885",
+      "image_sha256": "d4f322c24dde02a115754678bc3b8761512fc83ced045b4b26c0efdafdf49889"
+    },
+    "case_00167": {
+      "case_id": "case_00167",
+      "ground_truth_sha256": "d914b5628bb4c8795aad3f29af629a3c80ebd427f995ebc2ffc1dd05ffc76fd9",
+      "image_sha256": "41bf260c248a2e0f49f755e6f25c8850b6d8b8ddaef7ea34df1157dc33399ba6"
+    },
+    "case_00168": {
+      "case_id": "case_00168",
+      "ground_truth_sha256": "66a48991fdca4b75e46a6375f5c0af4367873446d064404950be5293e25ef43b",
+      "image_sha256": "0eedcb23583f504986afdbfbafa88d6a025591af407b3a331e81ff5b2cd14fec"
+    },
+    "case_00171": {
+      "case_id": "case_00171",
+      "ground_truth_sha256": "0dd2ca0e3d650fc1d0518752a985f4d4f14093d46816bf9550d1ae5d2e297ee4",
+      "image_sha256": "de426f4f308eb551d44caeb50bcbbd671b18324dc6b2c81c5200dcff4b4e3c11"
+    },
+    "case_00172": {
+      "case_id": "case_00172",
+      "ground_truth_sha256": "9d4a9fec92dba6e3a0fb510cdbe765ade7a5945c2375ebde88875ed2072f1f17",
+      "image_sha256": "1440a94e1d52368c97b87c04ff8dbc8787ad57fa313fc12bce625e6834703b34"
+    },
+    "case_00174": {
+      "case_id": "case_00174",
+      "ground_truth_sha256": "61f3e94e2d9cf824220f85dc444660a14e950cb0cc18e5584310dad63a07ec05",
+      "image_sha256": "04a27e7e46effcd43c912d8cef93eab4c91b1cfc76a3f3c5be2122c50f4a0b89"
+    },
+    "case_00175": {
+      "case_id": "case_00175",
+      "ground_truth_sha256": "14bb15c94e34c830a1bcde5a02c6156cd34e262c7462c613908264c5a684c023",
+      "image_sha256": "8542e7533ed4a498b737e04926e7af31d11425bd7ee3a15932ab9ecdbc06ebfd"
+    },
+    "case_00176": {
+      "case_id": "case_00176",
+      "ground_truth_sha256": "2291bda3a9fcf4bc834180422339ca56137cec18e3b94d6e411a4ac0af640f86",
+      "image_sha256": "8bb524fccfb6cd242cc4330a0a71d854f9ed3c26f8acd857c3ae148f559b160d"
+    },
+    "case_00177": {
+      "case_id": "case_00177",
+      "ground_truth_sha256": "e66f334cbef5b2a9cdd5aafe4830f1a389ddbf551266252d6b3a4e500d4a8631",
+      "image_sha256": "50e24db7ce59be43326851c1e9b5a9627a6c0f311742c3795b9fe41378b35fb2"
+    },
+    "case_00179": {
+      "case_id": "case_00179",
+      "ground_truth_sha256": "bbc2b13aefb9427ab05408d63edc8c73fe8cb8e6ee6416b7d92382daad9a5169",
+      "image_sha256": "990eaba41833f11e9d627a47f5a02efa77ada784f9f565217f1be3a82a2c7d9c"
+    },
+    "case_00180": {
+      "case_id": "case_00180",
+      "ground_truth_sha256": "9a9df51dbb56b75d67b8fdf6e7214965065d0e92d1ec6405a9215050f1877dda",
+      "image_sha256": "6f1734503a768aeeb1911bacf82e62fc5c4822081c8a964363f163a57d5369d7"
+    },
+    "case_00181": {
+      "case_id": "case_00181",
+      "ground_truth_sha256": "7f3fbe978d45113c1031939d9f09205435ecdbbdd9fb375028cae5dff8caa1fc",
+      "image_sha256": "c3af31c5f53db0dc483af00e3c41ad76b43a23d1c8c7122790e9be594520c973"
+    },
+    "case_00184": {
+      "case_id": "case_00184",
+      "ground_truth_sha256": "609bedbe1a91014c12d9562257a746c2dc50ccafc3754e7b572b4ad7d27ff6b8",
+      "image_sha256": "d65b497d685e52ba8b87dcfc10a0fa4b31ad17023510f3e0f7a2bfb61f0e3873"
+    },
+    "case_00185": {
+      "case_id": "case_00185",
+      "ground_truth_sha256": "e692e9a414247cc93d247caa15938e48d5c6451c548dbcff9d594725c53928b0",
+      "image_sha256": "8d69db0601b8030a38f399c3458e05543395f2ef68cd4029696f02821ec503f1"
+    },
+    "case_00186": {
+      "case_id": "case_00186",
+      "ground_truth_sha256": "59d95f63feed423fd244530eedfdb82805423a945f7eb558779fe79f4934b9bd",
+      "image_sha256": "8ea25ef6082aca0b95ed4b06b968ec155a736bbe5711d93bfe772d38a0676768"
+    },
+    "case_00187": {
+      "case_id": "case_00187",
+      "ground_truth_sha256": "072802859aaee0af84f5bd657e9e0b0ce445cee2bc74ee8fd3c9bb069921b859",
+      "image_sha256": "56e4971bfbc4afa83efefdab2a4e316bd3af5e6cd0f5a9049982c83cc4833f1e"
+    },
+    "case_00188": {
+      "case_id": "case_00188",
+      "ground_truth_sha256": "c1e532388aed3c4747e56d9ed23723e2c7f1babf154594a3f7a365e29c3a537a",
+      "image_sha256": "bc7663ac0340226690949107d1cb2b735cbbf7d9a2275d3456f408cbbccb81ef"
+    },
+    "case_00189": {
+      "case_id": "case_00189",
+      "ground_truth_sha256": "afbe79d87cf91ef64a85e4416a8ebe3ff1b9f2025eb1942a7b3cf2f15a8b99a8",
+      "image_sha256": "27e70b8e75d4151a880cfdb1d18e9edd79a1e328501af744b8733e1cee6a37c6"
+    },
+    "case_00190": {
+      "case_id": "case_00190",
+      "ground_truth_sha256": "d084da4f5aad738867884c4d3d3b17ac007e5608894cd166dd1ba085c6674e7a",
+      "image_sha256": "5ebf726ac1dd126fa5b382041a2cca35fd1a65522394ae24770a1cd30fe14caf"
+    },
+    "case_00193": {
+      "case_id": "case_00193",
+      "ground_truth_sha256": "b1c590613edc686247555872b42cf28a04186c046902347c8fcc640433d90266",
+      "image_sha256": "89bb0eb8074c3b343e2c7b5319b9f89db590a0dc1544c02c1e2ca81074c3dfbc"
+    },
+    "case_00194": {
+      "case_id": "case_00194",
+      "ground_truth_sha256": "f5f5896e98b512f0fc3ee83e3ffaf571b69817d60f6fb6aa62e4fee353688b98",
+      "image_sha256": "7ff7425f0749f7aafc5587cc4518539dbf58ea8c15bf5a2328e2b00b0d9c550a"
+    },
+    "case_00195": {
+      "case_id": "case_00195",
+      "ground_truth_sha256": "f571ff6a0ab4047aaae660206e435263c6f1147c76ec1545478f711ec376c920",
+      "image_sha256": "c86e5275d7fb29dfe82371b8a0283d71572fdda2db8c032ac6642ebc6c81fe69"
+    },
+    "case_00196": {
+      "case_id": "case_00196",
+      "ground_truth_sha256": "7616ef9aa683d2b928faf01e291552691d33e70b8d74a0834d91d3f144c97608",
+      "image_sha256": "04ac9fcdd99588e040a25542709a87cf959268e1c8fda0266344bc2160b8fd12"
+    },
+    "case_00197": {
+      "case_id": "case_00197",
+      "ground_truth_sha256": "44556aa49c1005e31f44d513ac0c025079d109dab5e1d9b9af90f39ffff67156",
+      "image_sha256": "e98863429d6a4b036dcf4c3483fb5b4a2e009ddc6390d0da647424772b77b9b8"
+    },
+    "case_00199": {
+      "case_id": "case_00199",
+      "ground_truth_sha256": "c06fc7c6f7d1e2fc956df01be05c87b827e0307ef716ba8edf56881c87f3f169",
+      "image_sha256": "8005f1e4040b41d78e9c926769217bd94b75c7c40db8d65db96e87c9605f2593"
+    },
+    "case_00200": {
+      "case_id": "case_00200",
+      "ground_truth_sha256": "4816813092810022d2217cedb92f9ac35248009d3f0ec126785f860d79e69e0b",
+      "image_sha256": "a442caf95f7ccd561c502176c6ec759b116a32a604c49fa06633d506d2bfc5ea"
+    },
+    "case_00203": {
+      "case_id": "case_00203",
+      "ground_truth_sha256": "4c1018d71b2519c0d8a9d71f580a7d8126eb9a5e8f768413605d5c1858be2520",
+      "image_sha256": "db1ace382d198df990ea7bc6131aa03cf4a446eb5692e1edeea9a59f77a27c80"
+    },
+    "case_00204": {
+      "case_id": "case_00204",
+      "ground_truth_sha256": "ea39fff721040121a20f40e6d8df791677e7c0f3d7f2097b095fa11f49e66a59",
+      "image_sha256": "2623b07d547eacea478765df84cb6710e0460248a32750a81cf6d212b762e93d"
+    },
+    "case_00207": {
+      "case_id": "case_00207",
+      "ground_truth_sha256": "aef01ca8ece739bbddfcdc7b154f021228ad2b1e689b75720668533eeb580d11",
+      "image_sha256": "c665dcf69398aee4644526535425c29fc1f0ed2ba0cfb4e9e1d0c6ce0b8f3a9d"
+    },
+    "case_00208": {
+      "case_id": "case_00208",
+      "ground_truth_sha256": "9295fba3177b314426b474e3a79c5d2f4a6eb3b069b6c72fc161387c78a8aa35",
+      "image_sha256": "99cccfcb17a7379ab67ba264c44d83015fab1254b27a090f991177a3e629d270"
+    },
+    "case_00209": {
+      "case_id": "case_00209",
+      "ground_truth_sha256": "d96c7e70ba4880c259a834c6633ae95bc770a8f66dcc553007b6b0713d884ced",
+      "image_sha256": "b050ce75765edefab6097dcfc87568800f49d03e09c306e3f4375c66eae45e41"
+    },
+    "case_00211": {
+      "case_id": "case_00211",
+      "ground_truth_sha256": "0a6f2f0dfcd56d18424bbcd239fbe1479d6cabeeb802d0dddc0711a9d97dda6e",
+      "image_sha256": "bb544af082768ccc80386b71e49267801642f98b848d7d9468fdf84a3d69b06a"
+    },
+    "case_00213": {
+      "case_id": "case_00213",
+      "ground_truth_sha256": "5694d5efedc507939e325de58b3e84c230161aca37776830a659293baa5a6656",
+      "image_sha256": "ce2f5d3bd608c509a043cb0f7323e28754851ff6ecd3a9bd55fb4219733e93fa"
+    },
+    "case_00216": {
+      "case_id": "case_00216",
+      "ground_truth_sha256": "5961c7871dc382f7855ad59bff0499b00a0e64aab0829a874aaa623638d0feb9",
+      "image_sha256": "d3daf83ee260e01f3707f999c7badcbc2a3edf77975f568de0e714a02eb50c5a"
+    },
+    "case_00217": {
+      "case_id": "case_00217",
+      "ground_truth_sha256": "bbc1f3ff26df6c3d7670588c507acc9e72d5d468efcae1b0737212c7bfd4aaea",
+      "image_sha256": "ca3ae3118fa52613f02bbd2725aef177b4f2e868d6c7bb53152af09181007644"
+    },
+    "case_00218": {
+      "case_id": "case_00218",
+      "ground_truth_sha256": "a34dc5040bccb92c3fe52e009a962a72265f54135e7bbb2f5b7bb3983a1b5927",
+      "image_sha256": "1d57ca21412fff2729ba969cf1df176ba51064541090b3dd4615914f5b5b3f59"
+    },
+    "case_00219": {
+      "case_id": "case_00219",
+      "ground_truth_sha256": "17df52ef9cc281c79ba400cd5f1af613f10253f05294f40f6798d9963e3b2b6f",
+      "image_sha256": "06084ff763727b80a64956e7802f5b92728c9107460fc13cfa454f9e8606c3a0"
+    },
+    "case_00220": {
+      "case_id": "case_00220",
+      "ground_truth_sha256": "6f402e7a40f543ef71188f23adf57e124bd627fd741bc245dad33828c6fba93a",
+      "image_sha256": "fb788c6099617cf4d95e8c3a791fee7177f87281ce7a7bb1399df1c08f22e041"
+    },
+    "case_00221": {
+      "case_id": "case_00221",
+      "ground_truth_sha256": "cb774fb4f147458092804b8fd5e7545d6e441ffb2a45a11c03eddae1deda42b4",
+      "image_sha256": "f72c750c30941d489a49d8f74c96d6a375928095e2bb494903a8c786a8bcfa41"
+    },
+    "case_00222": {
+      "case_id": "case_00222",
+      "ground_truth_sha256": "7258753fbd5f319bdd0b7b14d0036e8e519b775f87d8adc10054c2504de781d2",
+      "image_sha256": "86f1ef3cacbb9a95fdea5924d7eb58a645af359ab87bdd5970ede5de4a9dd78c"
+    },
+    "case_00223": {
+      "case_id": "case_00223",
+      "ground_truth_sha256": "af917a0b6937df77dc7c2f582d0d08e5d70aaa2bf9cad00e2cb11fac529728ae",
+      "image_sha256": "dbfd7951763a97476b4d708d8ec993e42130f35bcdb60233a5814fc50df8b497"
+    },
+    "case_00224": {
+      "case_id": "case_00224",
+      "ground_truth_sha256": "5e18defd971848f0f2d08c654206095209e033a26a021f1f96d5b58441b05dee",
+      "image_sha256": "063ed96973a0f2be363b6dea4615723131cd67fc15af692e7aa7780252599bee"
+    },
+    "case_00225": {
+      "case_id": "case_00225",
+      "ground_truth_sha256": "1c0a0511b6ab37797d9254792b8c33e1afe799cd3c447e684064529273554aed",
+      "image_sha256": "b2b12c64ba14e33f76ff714b5bbc354922a44c89e23f35738d00b0a8ec86de81"
+    },
+    "case_00226": {
+      "case_id": "case_00226",
+      "ground_truth_sha256": "a45d55af354d19ad230946415a0c01e55be74643b7c8d7bb254bbf7dff4083e3",
+      "image_sha256": "acd45477086ee042edc03c871c3b4f42954bcfe8421c9209f803d9dc4e348d3c"
+    },
+    "case_00227": {
+      "case_id": "case_00227",
+      "ground_truth_sha256": "4c6822055363acb3f7f978039d4d49514be50b2b98cf53355b3201c0e38737cc",
+      "image_sha256": "e414d7fbbd61b78fa2f314fdd629f33acacccac2a47d7b19409a8634ae23cb9c"
+    },
+    "case_00228": {
+      "case_id": "case_00228",
+      "ground_truth_sha256": "e661bfd92e358b0ff7dfc5bc23427114be00d7854128ef98b0f3613c8f969a62",
+      "image_sha256": "78d5ee0c1172d0b23f955bc59fe98e3e903371a7c117d6067a5a9dcd8e935208"
+    },
+    "case_00230": {
+      "case_id": "case_00230",
+      "ground_truth_sha256": "5db9d0d23b9c2bb51aa6a4d285336cc387754a5d89ddb90f13656087d97e650b",
+      "image_sha256": "d687c3f8fbaa3a25be07132afb2b412b14b92d5ed54431acb976a118e8fdeb9b"
+    },
+    "case_00233": {
+      "case_id": "case_00233",
+      "ground_truth_sha256": "35222af15ca3e855c5b5a7646ed327d94c84e2f088d7dd2b781dc26614d5a4c9",
+      "image_sha256": "d2ab2d5c38176ce4a2217ea8819d37f9b13356de4f1a2324cafe550568b4cbea"
+    },
+    "case_00234": {
+      "case_id": "case_00234",
+      "ground_truth_sha256": "6ce49ccc7a6d7be081a4a23cf11a37a31c25c4fd1dc3b3700db7cb3e3fa206ff",
+      "image_sha256": "d728c1be0d14f82f30a88899134849defd84b3597593929fb470d842a73e66b6"
+    },
+    "case_00235": {
+      "case_id": "case_00235",
+      "ground_truth_sha256": "3b18cb823564a0da84eeca7a87531e46cc8096ca1a03efe27a185c751d186684",
+      "image_sha256": "7591b093b9661d49a7a39399b842f132007f0ebcbe605c72e0c1914f3b6ada43"
+    },
+    "case_00237": {
+      "case_id": "case_00237",
+      "ground_truth_sha256": "a8bc9354c9c25e24878d4a04933bc5cc02d3fa951d298410acceed4ee94a7001",
+      "image_sha256": "e0030fd260c252e6c143acde6d8a65656f8995fcbc773d1fa91750ed558c4a37"
+    },
+    "case_00238": {
+      "case_id": "case_00238",
+      "ground_truth_sha256": "7796c7adb44dc6f39d1d2dc0209e6f4250c097caf2ac9ce3c7798de760550e7c",
+      "image_sha256": "9b2bf6749d2ce203a7e196f130b865a5e60159ebf70a9a9ad4fca6bbdc2f86b0"
+    },
+    "case_00239": {
+      "case_id": "case_00239",
+      "ground_truth_sha256": "723c4b0598ecd2122bcea87f4893aa565eab9127fefc5830f660a9e538c682ed",
+      "image_sha256": "f915dba34c61f9da0128a1c160c35027ecbfe42c9165e7c983d1055658c51bd2"
+    },
+    "case_00240": {
+      "case_id": "case_00240",
+      "ground_truth_sha256": "cfc08eb8eec78966e30b45c2e702ec1c72f4c461061c6638b09a6d380fdc4c14",
+      "image_sha256": "157b7ee995e75ff35fef5e779e2bacfcfa7bd0ec3efd3ac9be46c49ccebe832a"
+    },
+    "case_00243": {
+      "case_id": "case_00243",
+      "ground_truth_sha256": "8cf0f03e23dac0eeef496706727dfa608d80d6003f6bab8ac100d235dec69daa",
+      "image_sha256": "16cacaa27576db47e7f2278b938141a518204dc509b6bb6bbf3a4db29fdc6aca"
+    },
+    "case_00244": {
+      "case_id": "case_00244",
+      "ground_truth_sha256": "b84cd0dcdb8d1723ac6aa1fb90db3c944c82e18a5f3778163b4c2bd2c5266dd5",
+      "image_sha256": "18b6e92995cbd4906c00b7f85b6c542fb776c72d0ceb7e39b9c813a3712a7337"
+    },
+    "case_00246": {
+      "case_id": "case_00246",
+      "ground_truth_sha256": "4fb7b0340b71c0f7a17dae3679b6a363a1ae94f272f9fb29866d40668ff8f467",
+      "image_sha256": "02ee75d04e48d53126cffd572ab5da7dd46d8c8b505849ce627a997c0b5d26b6"
+    },
+    "case_00247": {
+      "case_id": "case_00247",
+      "ground_truth_sha256": "a96df398eeaef80ea082984f0127aa883ab0e1113bd7108e011837e1a7e4e5a6",
+      "image_sha256": "ac96964f0308578a0d2e1a2a0145d228376768b00bff7ce27c90fe7814e29023"
+    },
+    "case_00248": {
+      "case_id": "case_00248",
+      "ground_truth_sha256": "c5a56749a8e33f15c7a8c9841ceb14b3fcdaf9334b0dae6972cf5da932d14761",
+      "image_sha256": "a51ce111c6e660dbc2b3e6c8471310dbd9be635ad4e8729f16931ca6b7f0d810"
+    },
+    "case_00249": {
+      "case_id": "case_00249",
+      "ground_truth_sha256": "9a9a4a18bc9abeed689715bf97083b416a2315027a1818bbb3dda7b22ed2df94",
+      "image_sha256": "dc8ae3cd72ceb3f43992838418ac97c973e50101a518fd929a0f40311ff780b1"
+    },
+    "case_00250": {
+      "case_id": "case_00250",
+      "ground_truth_sha256": "31099b6efe2c4437d1294fc989bf476800f9a72b7fd6acfc3e3a4f59b9732b72",
+      "image_sha256": "3c67d3baa9b779184fd5df4b29972a1967161f5b308e4e4051760abeecee64d9"
+    },
+    "case_00251": {
+      "case_id": "case_00251",
+      "ground_truth_sha256": "567c8cae71ae46a2a07e4828f6bcc0e1e78cf2a5dc5ba07add14a80d702dd7a0",
+      "image_sha256": "09501ac103f0cecd5067474f0fa0616cf88abe51fe92a4e0afb3807f48c4a9e7"
+    },
+    "case_00252": {
+      "case_id": "case_00252",
+      "ground_truth_sha256": "397686e1e56c5caa030d49b66e5ff0bcf9695b2b1d4c281fc740c36e20f175b9",
+      "image_sha256": "67ef560931eb6c9fcb973726d7b1dac52002bbae15d1084bd8bb5bb769061bf9"
+    },
+    "case_00253": {
+      "case_id": "case_00253",
+      "ground_truth_sha256": "d9b06d4fd2bc1164aff4ad81f1acd68e45684f4b02c37fd7b914ea614855531e",
+      "image_sha256": "8dd3f72d5cdc2c0614651f7909081bca6503fed6603f9e4785520333f88d831d"
+    },
+    "case_00255": {
+      "case_id": "case_00255",
+      "ground_truth_sha256": "875263f900e921da4f946d916aa27ec2f644990b28316e615e20fb538beb7db8",
+      "image_sha256": "cf4fe4bee3da4e14a93d8e6282b0506f6b5cf8e6f86b94873c63f610c624020d"
+    },
+    "case_00256": {
+      "case_id": "case_00256",
+      "ground_truth_sha256": "1aea3dbc3155f9a303f133b6f3902b96c1b40d3fea0a946199463ec74d7c5bda",
+      "image_sha256": "40759f7f7e58cbb78f8848657174183e3e96a05e92617d37f13bd0003d1dc6f2"
+    },
+    "case_00257": {
+      "case_id": "case_00257",
+      "ground_truth_sha256": "75099ee56ba58c0f6d8c09829ec9aaf93cfe790ab26969fb4adf55425b79e05b",
+      "image_sha256": "b89ed38bc0575d75d7ceb3d93423d602d034f0c13980f8898d175fb12aeb1ce0"
+    },
+    "case_00258": {
+      "case_id": "case_00258",
+      "ground_truth_sha256": "c2e1741a3af7b4b082e62c470c81378ce3ae226f18682252f35c1eb53c4a40da",
+      "image_sha256": "e50bcda46c997d0c9fcc420a46468990c146b230172ffaffbe507e2f24ed53ea"
+    },
+    "case_00259": {
+      "case_id": "case_00259",
+      "ground_truth_sha256": "c3859a5a902b4e2affef782fc663891b1e95f55ab234ba744e31122f7385eb48",
+      "image_sha256": "71b545f65551b75b6377367e986314e558216ef9b370bdd244385e9e9cd994a6"
+    },
+    "case_00260": {
+      "case_id": "case_00260",
+      "ground_truth_sha256": "e98449371045c434428542e7f1d36f5f7fbbdbdf9085c168c9d261e123f05689",
+      "image_sha256": "7043359af4b3f9e43b639a11597a5e2391a9220cc341527b10fc4ccd56a3599a"
+    },
+    "case_00261": {
+      "case_id": "case_00261",
+      "ground_truth_sha256": "dbff267ece26791b6e441586d42f172cd9a4ebbac8c0109b314e6fc811b530c6",
+      "image_sha256": "8348924956e269ce03878f8e860882608b459623933152b13d892d9ed31d0b46"
+    },
+    "case_00262": {
+      "case_id": "case_00262",
+      "ground_truth_sha256": "891ce66e24c0491e7b2ea8c3bc2c055fc19225feef9226af9d79dcfe3cdf8fe0",
+      "image_sha256": "ba94630fbafa61e9af70879fbe7604059e17af738a587bb50036f5b8f6f40828"
+    },
+    "case_00264": {
+      "case_id": "case_00264",
+      "ground_truth_sha256": "0749e646551082dc5f6e59e14b95ec0862a940d4f00d0ab11d87d840b402b114",
+      "image_sha256": "770fb9f6acf715e232d0b2aa3c1f0ea6f6edf648bbcb6a2eeff0df4da16df0cf"
+    },
+    "case_00266": {
+      "case_id": "case_00266",
+      "ground_truth_sha256": "877ddb8b5cc2be9aaff8e3bddeecce2ba4fda489e39788bef9b9d2d1351a4f16",
+      "image_sha256": "a2eb34b4e4dbd6c60a2b762fd06ecbe9f23cbc4c16b1dbc07ada9a3e5b181ca7"
+    },
+    "case_00267": {
+      "case_id": "case_00267",
+      "ground_truth_sha256": "38c888a27e90dd866527e5980cce3d8b3bf017e0e969e2336019967e3d5efb00",
+      "image_sha256": "c50f4bdd59af4ed58773e66f4d53667299a386ac2624587ca83783f30116b9da"
+    },
+    "case_00268": {
+      "case_id": "case_00268",
+      "ground_truth_sha256": "bab981763953c409233dcb489f61775d9c20ff8b0db1c18e945f285c79e30db2",
+      "image_sha256": "1149453e8ba194cf49083f9fc7d1697d4f6f090914313aaf30836b7e11d73623"
+    },
+    "case_00271": {
+      "case_id": "case_00271",
+      "ground_truth_sha256": "d571bde6d7721980da0372e3ab301653385abeb73e0c8864fa4d6747c4693712",
+      "image_sha256": "e90292b783fd3b24bc81f9fdce1512ae0636e2d5614ae7822316148beff382bd"
+    },
+    "case_00274": {
+      "case_id": "case_00274",
+      "ground_truth_sha256": "d7ea89e65138452944cb1a50dd52eabcb05f8ed4aafcf3f3d4190b6565abd7da",
+      "image_sha256": "51894302c01eb22fe4ca5b211eea33eacb93fa22053aa427de70a71970f6d424"
+    },
+    "case_00275": {
+      "case_id": "case_00275",
+      "ground_truth_sha256": "b72ccc03896b1aa6adebfaeab19885b6395aeb0067beb9cfc48282f25bd18f46",
+      "image_sha256": "d791a70d571c99dac63d8fa8d8b9ab18e8f2d3a177c4256a738f9abf3854a9ba"
+    },
+    "case_00276": {
+      "case_id": "case_00276",
+      "ground_truth_sha256": "0cf6c71034601cc03efc59fd54e575c635c11228056b41919692d0c7df400e44",
+      "image_sha256": "89e90757c87201d0fb21218519a86fff630b5dd68b138e211f66efa14b1138a1"
+    },
+    "case_00277": {
+      "case_id": "case_00277",
+      "ground_truth_sha256": "8e66fc860008fdec28f16df2e16b13207d736225227a930aef95ffbe99207624",
+      "image_sha256": "12eb560334f97fe28bdae58f3630b97d30684224297896650f538c654007bbc8"
+    },
+    "case_00279": {
+      "case_id": "case_00279",
+      "ground_truth_sha256": "a500a1f6c0423cd95de0136333767227d5ee46a6c3dfc0501d87667450c6c14d",
+      "image_sha256": "f70aaa35e433638b60e6d37b53572c7d7f234dc636ea108ad7cd9d77d47a0816"
+    },
+    "case_00280": {
+      "case_id": "case_00280",
+      "ground_truth_sha256": "be38c367be996045c3d9997aea7c7fab5187ed88c9128eec09fd8d2b06cb3728",
+      "image_sha256": "ff7c0e2621bbf34c4d6c0ca748842f6207fd98a4996459c4516ba43c4295b2de"
+    },
+    "case_00282": {
+      "case_id": "case_00282",
+      "ground_truth_sha256": "4e51346498d5f3381313a1e83836c1788dd1dd87e223ec1f548d4b3d86b7cc55",
+      "image_sha256": "db6ba04211fb811bd0dc8f060c91a67483471f6ba2b54c7bfe4e651a4ecd5a02"
+    },
+    "case_00284": {
+      "case_id": "case_00284",
+      "ground_truth_sha256": "8b3479b42b8bad25c170ebfd0d8d49ffbe2d1e6c6df97aaf648adf960201cffe",
+      "image_sha256": "d0a2719ceeae1b272e29efc16c91439e6fd070977a6037e27b0261e25edd2b8c"
+    },
+    "case_00286": {
+      "case_id": "case_00286",
+      "ground_truth_sha256": "130b4a0e3f8a19980cd46586440cad7a5efa1e936538b073c66a6f5abdc8e7a5",
+      "image_sha256": "cb73b17a6ab839e38bb3e7d3fd9362fceba9c2207667aafb4bfaa1255e2038d7"
+    },
+    "case_00287": {
+      "case_id": "case_00287",
+      "ground_truth_sha256": "ff2dcf967425962acdc4257f77bf3fc205ee2287a92fb969b498182f4df907c8",
+      "image_sha256": "37ebdac8b7e513fe93839282931e7f29773b0a3e3c29cabadc200ec7d68b241c"
+    },
+    "case_00289": {
+      "case_id": "case_00289",
+      "ground_truth_sha256": "8bf8a6c4bb5bf8a6d2f8d5addd7925a97f2577f0b6faa87b3dd5965632b8e952",
+      "image_sha256": "9294502e23b588e2bc85763328fd7b41c8ff708bb1295dee610429747fb595a8"
+    },
+    "case_00290": {
+      "case_id": "case_00290",
+      "ground_truth_sha256": "d3a43b48e6f394e90354835a5c170cd445caea50fd5ee722bdde2e4cab2dabb4",
+      "image_sha256": "5f835d15704289c6a0f7f966a917c334036ff6374c603b864565e7b3ff67da92"
+    },
+    "case_00291": {
+      "case_id": "case_00291",
+      "ground_truth_sha256": "a71525ba09ba9c3603c0f759ce4a2cf3dd4b420bfaafc7f4c11f0abda11b410c",
+      "image_sha256": "b261a95d330a15652627967aac72cc31e03670225b1cfbc06db8eee1acb09c68"
+    },
+    "case_00293": {
+      "case_id": "case_00293",
+      "ground_truth_sha256": "6dbc4cb68b2c79ba3314cbbc2344ea9fe64486863e4659ef15e3e0ff1e5084f7",
+      "image_sha256": "9684cd1ff7dc7fcb9672a836ab9b573bcc7fcec9c0c531a16a0a8311a65c8cf2"
+    },
+    "case_00294": {
+      "case_id": "case_00294",
+      "ground_truth_sha256": "d5b9ce00de7a5aa202f151ea397fb38e76811482ba7c41e19dcf2998ee1800ce",
+      "image_sha256": "2122c66bc91f8befdc1937fa63d0683c35402d5d9068cbe7a6694c046ef00108"
+    },
+    "case_00295": {
+      "case_id": "case_00295",
+      "ground_truth_sha256": "f77110225a5ec7d2b637e170719031e86a259ed9cd730990466a31a85562c4ed",
+      "image_sha256": "8faf1bac54356bf4ae73b554cbfa4734ed0e8f819335aa0935d4be6bf7dab520"
+    },
+    "case_00296": {
+      "case_id": "case_00296",
+      "ground_truth_sha256": "5760218f65974648b5e2c56099bd54187f1d2db24a760f34364da28c5098fe62",
+      "image_sha256": "b5a2c8f0fff9d88cd96d64e1d84287e8b21fd07cbb2b389753d328ba1a460aab"
+    },
+    "case_00297": {
+      "case_id": "case_00297",
+      "ground_truth_sha256": "3243133a6c85f31f25359d5cf122ddb50b384eac18487f9f55a5b2ca591de396",
+      "image_sha256": "a1c382a99c77963c0a7068a511f82739de82b5a12b0268aa3252af7bdc786a76"
+    },
+    "case_00299": {
+      "case_id": "case_00299",
+      "ground_truth_sha256": "4f5af9d4ad627401a86dd3bd1eca6c3d9d7498fd9f8b567bbf4989e7d1357d12",
+      "image_sha256": "4e46e9ba66661962f95d627c5b7301702e7bcd7c7e2efe75aa6b97cd270a650c"
+    },
+    "case_00400": {
+      "case_id": "case_00400",
+      "ground_truth_sha256": "78499c3c55fa4aaacb482f1249c9311bf1d68acac5b169b467305f85d48102fe",
+      "image_sha256": "5f2383a928ce29d394c48092a00fb12607614bb89c8ccb83cc75c2797d9e7415"
+    },
+    "case_00401": {
+      "case_id": "case_00401",
+      "ground_truth_sha256": "f9faa7f83e7b9b9ace7513ba6c1376384017eb4785d2cfa990a1451dc870e517",
+      "image_sha256": "13a50c91feff051735588229dcb3f65cd3c877bb67e3beaac94f36a3124079cf"
+    },
+    "case_00403": {
+      "case_id": "case_00403",
+      "ground_truth_sha256": "badf928d32141aea3f6e2c9bc2443480d255e7ac2a8eb76850da2a214d93aa16",
+      "image_sha256": "04a8a01957baabdd7bfc73758e30214c02eb0b23ca2acb945f7a94015a8f4ce0"
+    },
+    "case_00404": {
+      "case_id": "case_00404",
+      "ground_truth_sha256": "c1d31f3b6ca9afc1ef06e4c5ed47e4d56bc2e739eae6f1d642dd5dd0652a939d",
+      "image_sha256": "0861eaa63b86fac8375232c822a785d86af9fb9b517973ecd750a2b0823121fb"
+    },
+    "case_00405": {
+      "case_id": "case_00405",
+      "ground_truth_sha256": "3a9ffc22dd9dcfec1627124fbde0c6d04e5a781416cf3135943c83ee160a8b34",
+      "image_sha256": "efad897241cbc6d50a6003b982bd10d7f486516bac106fe40b3a2c24e65ec48e"
+    },
+    "case_00407": {
+      "case_id": "case_00407",
+      "ground_truth_sha256": "55992569b3d1d4b8c10acfbb73d74077ca44e8003efc291a91312f7205447a50",
+      "image_sha256": "48e1ae7c6ed7a95820a3960836de9f895a7fa75464d5e17a06788685442ef1f7"
+    },
+    "case_00409": {
+      "case_id": "case_00409",
+      "ground_truth_sha256": "38cb37be66fb299a30769e56c476172811233de50bf4671859c60e3a54d30450",
+      "image_sha256": "31e73618e147a4996fed7b22bde0fe843676bd757a7cf6e545f995e3ae4226df"
+    },
+    "case_00410": {
+      "case_id": "case_00410",
+      "ground_truth_sha256": "f09ad262f32c8bc7b826003f9e4dbf607891b24bbc6f8a7db06db9152bf0c55a",
+      "image_sha256": "002eddb9dec0be740f0557a352ff5f3b5de4650866c323de42adbe9867129114"
+    },
+    "case_00411": {
+      "case_id": "case_00411",
+      "ground_truth_sha256": "3b5fbfccf07bae13ad1a811f5d85ec0e9ae233a2d9c737ff3f28c36a4e47ff6e",
+      "image_sha256": "cb21901856db3015038752b0be9640c3b2391b8197008c296acd85787a20632e"
+    },
+    "case_00412": {
+      "case_id": "case_00412",
+      "ground_truth_sha256": "90ccc828857026e96823f416bc3c8b6c7f0b83fc07e4975c5260e3511909c8b4",
+      "image_sha256": "e5bede2c9946802eff2af5f421f57500b7a1c07891a11a3c5c490d98658adfd7"
+    },
+    "case_00413": {
+      "case_id": "case_00413",
+      "ground_truth_sha256": "68cd7cd9847e3828cc1a3ba19e1598fefc73fc0fcfa8f4b4a0e8ad86233e4a91",
+      "image_sha256": "158b60625db9c9b8a92b6290ebbd203f9ae653a95cce11abddf611c468651782"
+    },
+    "case_00414": {
+      "case_id": "case_00414",
+      "ground_truth_sha256": "2371283de0964c5b9b07dc4c3d8ac688539ded3000907949d173ba7707c0a819",
+      "image_sha256": "39447bfba996f13d406a079835194f5fa87325a5ffbb2135382fc67b169935fe"
+    },
+    "case_00416": {
+      "case_id": "case_00416",
+      "ground_truth_sha256": "674718948594de32d0678ab44dad8a8db86ec3d9c14ca339d0480ea66c8eea09",
+      "image_sha256": "756fa3342bf1e24a6159c5b144863d67d8f207d3932ea848108ba484000a4f8a"
+    },
+    "case_00417": {
+      "case_id": "case_00417",
+      "ground_truth_sha256": "b5c99c9c0469d84a2ceacd80d5c1c9154d8a9df38f5d1e6604df41a713d491ac",
+      "image_sha256": "9af9d3481474e8ff7aee1378200b8f5821c18a1429fae4cc846f78752ce6b4a4"
+    },
+    "case_00418": {
+      "case_id": "case_00418",
+      "ground_truth_sha256": "dd57b196f1b8b78d445bda942dba5a09086f92a34a041c31bb50b2b9562a31d7",
+      "image_sha256": "8e0d025ce13e233b48cb3b8477fc584d0f8f60c12823f5985cc17eded5cb7cb9"
+    },
+    "case_00419": {
+      "case_id": "case_00419",
+      "ground_truth_sha256": "24e55070ca291e845c22a98aae486fd7449fad882c6fe8820ccfd85bdf2df970",
+      "image_sha256": "6d3de5ebc0be11aff0a00c7a77456d5257a575300733032a392112e2327598e6"
+    },
+    "case_00420": {
+      "case_id": "case_00420",
+      "ground_truth_sha256": "c351371d26dfb5f104e1fe12d7b671791d5542f1a80f6e8121058839cb564683",
+      "image_sha256": "d0aa323f2a3ee4549d6d3886ff1a578e5f4f242f44546db259915478bbbbb627"
+    },
+    "case_00421": {
+      "case_id": "case_00421",
+      "ground_truth_sha256": "13c1aa97ad30611d0c967c8279be8590dde99905ee2aac3f1b89509ca31f085e",
+      "image_sha256": "cebb45afd8205dab3f18e937114e7757764efba53236b49e9c85e71d212af813"
+    },
+    "case_00422": {
+      "case_id": "case_00422",
+      "ground_truth_sha256": "00e3d82a41e09410c6a4d301556a4d982b8f9de594f4f6edb9281b666cebbfec",
+      "image_sha256": "61e727017f33c5ff0444e811ca045dc59a9991a0f6b84cec6ca60ec68989679a"
+    },
+    "case_00423": {
+      "case_id": "case_00423",
+      "ground_truth_sha256": "3c859e9dbd5eba3476d4a870e3b8ba76c3126d10a349c7a95685071c0aeec80b",
+      "image_sha256": "ecd858073f74298e6714f93eb574233734a72e2b39d44fb75a9fd846508975c9"
+    },
+    "case_00424": {
+      "case_id": "case_00424",
+      "ground_truth_sha256": "ec097d95bfe8ee0f455d66b91b3ad94f1a6aa12b62f8a4f091483fad11e711aa",
+      "image_sha256": "153bf9d8a3d80d1622e42917ea489a6dc92d037c21f36387cfe8cbcd74671cc2"
+    },
+    "case_00425": {
+      "case_id": "case_00425",
+      "ground_truth_sha256": "7b2b32bf41f802d3b86109d59e9abe6d5c2f7f9b9fb44f356968d2d8cc002c2e",
+      "image_sha256": "071d63c82682b88d7765584645013d5efb3c23aaec48c545dc881b75accb9ce7"
+    },
+    "case_00426": {
+      "case_id": "case_00426",
+      "ground_truth_sha256": "098ade190cc97175af6877c18d58f664b69350e482cc3bf42985e4d84bd5f569",
+      "image_sha256": "6c94437d1b512bdd07daac90b3e29b498ccff2c26aad51edf2a9ec2f1227c46d"
+    },
+    "case_00428": {
+      "case_id": "case_00428",
+      "ground_truth_sha256": "184c2b923a51bdb029a013b003c9aaf791c04a8aba56ebd4dbef21077a008ff6",
+      "image_sha256": "e94ea76691f4d7ea86fe2053f70f0f19b382d93db59f4ca874e03af5f31b723a"
+    },
+    "case_00429": {
+      "case_id": "case_00429",
+      "ground_truth_sha256": "210812214970d95b5f63efe444c3f62f800cdb122f2b3d9cbd9c401ea04fdd1e",
+      "image_sha256": "08e2f2d8e40b45374930ac646f97ee8526a4432188a090b23eb83c2974c53a55"
+    },
+    "case_00430": {
+      "case_id": "case_00430",
+      "ground_truth_sha256": "fd4ff76bb447021d25d72aeba8d1f193cbf7a55d4add45d0e03084c19d8f41c7",
+      "image_sha256": "3eef3d2346f55bb980e67c3ffd7e0682ccf1fbb9dc5951ea77c4733ce4157bee"
+    },
+    "case_00434": {
+      "case_id": "case_00434",
+      "ground_truth_sha256": "375c7050719fd75a24b25631b1a74c5a214b59fdec1c8810a3ea9e167bc4b669",
+      "image_sha256": "6a81edbf68df95c011532ca8cf53d515d5aa4c82557bc06682f58c6f232fde41"
+    },
+    "case_00435": {
+      "case_id": "case_00435",
+      "ground_truth_sha256": "5467c8d519c011323e5e96725d837356f48287300389291461ee08edcdebfd80",
+      "image_sha256": "518588211eeeb3868acf254a3581b07694807c8520a69cdaade97cba9ed17919"
+    },
+    "case_00436": {
+      "case_id": "case_00436",
+      "ground_truth_sha256": "be62700b5c6822049c80b79e94eab39bb571470573587400c374a309fdda99ff",
+      "image_sha256": "bdbabc2bc0a3bcfaa8b5313afa9e2c01ea67ae7f6e97ca05a75a4252a5151ac3"
+    },
+    "case_00437": {
+      "case_id": "case_00437",
+      "ground_truth_sha256": "c36d3787ecf873bf5454a0ce508a872dc8c7dfc813890ecf1ff5c508059e0a68",
+      "image_sha256": "9dbc7fbc55b9d2ed957151f432b8b6d58b684507aaa687cd57cfc2cd4411996b"
+    },
+    "case_00438": {
+      "case_id": "case_00438",
+      "ground_truth_sha256": "a4bcfdee05bbb6611cd424a2dbbe8ac83d4e3635b1fc22c7fd799a6acd1a54a0",
+      "image_sha256": "444ee0071ae32e4a4528c55847d75bf9251cd4d3dfdc1221c87f3d935562475e"
+    },
+    "case_00439": {
+      "case_id": "case_00439",
+      "ground_truth_sha256": "1d5f23e08c90076f74285e0793749cf501110877e1242a2caa03444dfa93763c",
+      "image_sha256": "6143c95225215709812519e4c0413a439c7adf141024dd45bf572464da7c5911"
+    },
+    "case_00442": {
+      "case_id": "case_00442",
+      "ground_truth_sha256": "d24734eb20c2374e5f6747557db8febd8cc498304f1104093eaf8713236d461d",
+      "image_sha256": "fd74109aec787262988a3112b590d909c3c3ed4dbad4b8f968bece191f489a85"
+    },
+    "case_00445": {
+      "case_id": "case_00445",
+      "ground_truth_sha256": "578d9b1d1c8d6196874eae425f7a5a08d83f4b4391f682cc474804de84e4f640",
+      "image_sha256": "aa29dc8659d6631312cf4fdad133f44355ff0655d7b193d4c27540fbb36ebe17"
+    },
+    "case_00447": {
+      "case_id": "case_00447",
+      "ground_truth_sha256": "05af1f81c1d31b4ca9f4dd97c4d17479ed46990a66f7dd92507c55ac9398d7eb",
+      "image_sha256": "ce66a16fa2754a5c4c90fd044deef05ec2d44ae4f2dcba15b2933fca5593821d"
+    },
+    "case_00449": {
+      "case_id": "case_00449",
+      "ground_truth_sha256": "d9168c36eaeb64d680ef21fc8292e3f1cfe32fb845ce9d6590d079093074c8b1",
+      "image_sha256": "a0ddd4bb48db2aa9515715ffada666675ef2af66975716b841d11a2b5b43e512"
+    },
+    "case_00450": {
+      "case_id": "case_00450",
+      "ground_truth_sha256": "d6c5499f587528b2c3c91ca269b9809622c9df48da07144cc58522ecfbd43b95",
+      "image_sha256": "7cb7da1fd88fecc163a3747ce4ed9086b87ea11bba596f094cb8a24d9134cec1"
+    },
+    "case_00452": {
+      "case_id": "case_00452",
+      "ground_truth_sha256": "02595334c33178c7cb01a9c8f5306557f4e4ccb8cf02194885374760508bdeec",
+      "image_sha256": "a3f62054b6544cc173eac864e16287375f0f923762abb23d4a4fd384c18e1a5c"
+    },
+    "case_00453": {
+      "case_id": "case_00453",
+      "ground_truth_sha256": "e84d720082e15226de6b065ccd5b485098ebc375c9a664d592671345f44c4b2f",
+      "image_sha256": "0b0f3307fb5c860b47a617bacb78da2f8bbb68da4d2d70bc5af7fa4b759ce3f5"
+    },
+    "case_00454": {
+      "case_id": "case_00454",
+      "ground_truth_sha256": "8bbe1d187535051cf2b04ef6b52cef59db5ff8feab6c455abd419fad33677b91",
+      "image_sha256": "745623f7e08b874e6c1ce32e19b0fdc96a0298c4eb43b414b0896746108d0bdb"
+    },
+    "case_00455": {
+      "case_id": "case_00455",
+      "ground_truth_sha256": "073a067f250caf2cadbd6589d6131eb22baa2c3636cb2ea8f79f7dda94772b75",
+      "image_sha256": "0f063652ae668c729073c158267c4a98bb6a70cfade39bb060fc52a5a6946ea0"
+    },
+    "case_00456": {
+      "case_id": "case_00456",
+      "ground_truth_sha256": "c66ef2096efe64c53711d99fdf4f1e7ae0b6f9da487c827ab362b05824cd5668",
+      "image_sha256": "56f85125e9d0d98116e9dd0dba3d1a0d891f488466b90b6cb35b236cae1b8024"
+    },
+    "case_00457": {
+      "case_id": "case_00457",
+      "ground_truth_sha256": "7d5c734b7e1fc1f863f08476d27b2604afcad6cce2a57b283a6b52e84fbd1dad",
+      "image_sha256": "f9c750ff0392e635f574161ce0c7c960841e6c590bfdb2d5bb99bf89e68137ca"
+    },
+    "case_00458": {
+      "case_id": "case_00458",
+      "ground_truth_sha256": "d59e6e65524e9248034570f6ba3d48d2173d91705078b42dfb29ee309c4d7ef8",
+      "image_sha256": "3ed1aac7734d763c02b33ece74bd8a3bdc1fb190b600af69f74a8c9c3dfe6830"
+    },
+    "case_00459": {
+      "case_id": "case_00459",
+      "ground_truth_sha256": "9bc4eea64c02cfcdb7774343be9651f057cb9a174391377aca1ec151e567e735",
+      "image_sha256": "df0cc393d849c8a59ab699afeb3c452baa8b79e689fe3779ae74de93d7d0c27b"
+    },
+    "case_00461": {
+      "case_id": "case_00461",
+      "ground_truth_sha256": "9d96832f59cd6d74f24a9100749fd35711f726114fb3a2cdcf3a5357e1d58ad0",
+      "image_sha256": "00bbcec62ebab02efc7a39f178d295595ec6c8e33fe1fae55d92af4b730f75f2"
+    },
+    "case_00462": {
+      "case_id": "case_00462",
+      "ground_truth_sha256": "d9e5146747cef7c20fb661a256a3c47670a9575d9460b31a2cac8cd1e965d72a",
+      "image_sha256": "1b6feec2731ef83e29869ae2c8d77a4474832e746fadeff49beb17ce89a3abb1"
+    },
+    "case_00463": {
+      "case_id": "case_00463",
+      "ground_truth_sha256": "16a7b3396bfd59623ec0e9819b3b3e8d0ca47ddaed18857bc2c0ffb7ed898e1d",
+      "image_sha256": "4c0b57858a54226322e925c36bccdf2b2bd30c99093790a65265e6258ba7b759"
+    },
+    "case_00464": {
+      "case_id": "case_00464",
+      "ground_truth_sha256": "4705f7b1d9e5ffc34ff184dbfbd73258cec7991d7ebcda0f2500140cb2ae76f1",
+      "image_sha256": "9e8e90d2f2eedeaac2ffc69717297a10c11908c2e4688aa82e46c4ef331d32af"
+    },
+    "case_00465": {
+      "case_id": "case_00465",
+      "ground_truth_sha256": "f4be870f4e495a798871ac69987d4017ef6694005ae07254bf87aef59b341ed7",
+      "image_sha256": "474d86bb7554c89e76de2334d852f708369fbc911ecae5622cdee481e180c305"
+    },
+    "case_00466": {
+      "case_id": "case_00466",
+      "ground_truth_sha256": "15c01a0455c094101d4ebe92c68c7df47832d276c27136f4968864f20a9d49b0",
+      "image_sha256": "2611b7866c9bc3b1a6df4573f4c340d578595983cb75f39c4de42bd15396cc4d"
+    },
+    "case_00467": {
+      "case_id": "case_00467",
+      "ground_truth_sha256": "21a0f3fc55fb632680cde6ee4d8ccf7fa16fcca402148ec45c9ed93b0395c69b",
+      "image_sha256": "3522e4ef07cd3c3ec5b5066e24d9ef2b10378835dc0d50ed24a1890f55a08f00"
+    },
+    "case_00468": {
+      "case_id": "case_00468",
+      "ground_truth_sha256": "f71ebd719b132908285fdb98b2abfe68abe4c2b9723f81b7aa91f81b05d37008",
+      "image_sha256": "edec750dcff365f79e6eb97212c8178ba9b1e3812d58a6c87e42db56f477fdfd"
+    },
+    "case_00469": {
+      "case_id": "case_00469",
+      "ground_truth_sha256": "dbfd5b1d35a6e01fc5f97d8a8797b7cff18fba96109369980cbee70a6747ec58",
+      "image_sha256": "e9232cb30363309cd34c4d62df1875a37c4ed20d0ce73005bd58e8550cb64f07"
+    },
+    "case_00470": {
+      "case_id": "case_00470",
+      "ground_truth_sha256": "6c8afca85c9c5d962c7c5f03f432b0601114d776eabf36f196b31ef931dde57c",
+      "image_sha256": "a278ba5460220f38cc5f82fcef1d6b11198d61656dcf1b1f1e2a5ba506dbafff"
+    },
+    "case_00471": {
+      "case_id": "case_00471",
+      "ground_truth_sha256": "a3c428de9fa55156627608a92ea3eff9d719813710a63fda58c82bb83471f64b",
+      "image_sha256": "22b18ef9fb3e24f949647f3fb86ba336a297879bb2f19061dfd433ac9b3f27d7"
+    },
+    "case_00473": {
+      "case_id": "case_00473",
+      "ground_truth_sha256": "378232dd52b7d206c80c69d4f8f37bc2be40982c7017c1cd3eaf96649978f432",
+      "image_sha256": "b007624468a03576b4244508eaed1cfbdb45ab7703ac8d05c4e090f6340cf2f4"
+    },
+    "case_00474": {
+      "case_id": "case_00474",
+      "ground_truth_sha256": "a62c6dcfca3d830f1269bb2858c85602da8ebd4417df6725262c171a8d448a6f",
+      "image_sha256": "db530cbb7ec558e8e8974c529adf41f35db14cf28b9028eca43a2e477913d386"
+    },
+    "case_00475": {
+      "case_id": "case_00475",
+      "ground_truth_sha256": "31e58f4e507e87155edbba8866daa1847f1b14e3d1909b72c96488ae6367f8cb",
+      "image_sha256": "330811ea729e211317d13ec5048440214abb4c4d762fefd88d70adbf9e14abad"
+    },
+    "case_00476": {
+      "case_id": "case_00476",
+      "ground_truth_sha256": "ce7a9ae6fef12923045ef82a56f8e447b986172935ab248ad8d3fa3a522c169a",
+      "image_sha256": "b9f6245dbecfb1c4ac341352c5806a638094a25447ef79aac6739405dd5fcb2d"
+    },
+    "case_00477": {
+      "case_id": "case_00477",
+      "ground_truth_sha256": "310bd8aa3fd4deb5406c78f16167db64d002c2effe38db8701f14cb8e6377bdf",
+      "image_sha256": "dedd76c3bdf2f74b18508969ebdb715a00a814173636d4f02a2fcfdd55bba45b"
+    },
+    "case_00478": {
+      "case_id": "case_00478",
+      "ground_truth_sha256": "e3309d925b4294815daaff126886769b97345e9b24a37ca8d1028888952c1c53",
+      "image_sha256": "1699a935f56dc99a070bcea1c56edfcdc893f43930d98b29dd3fc0fe0ee71693"
+    },
+    "case_00479": {
+      "case_id": "case_00479",
+      "ground_truth_sha256": "c8487c1ba48ee5d7042e9f5670a4b4763955465437a1551e66c0a52ed05f5128",
+      "image_sha256": "8e9b9557550d41040d275a8b09cb2a8abef68d1aec33aa051620c180d2a6ca56"
+    },
+    "case_00480": {
+      "case_id": "case_00480",
+      "ground_truth_sha256": "7cf96c985dbe8b2bf8e9b79aa92ac15d5678ad695791781bc91efee7d788045c",
+      "image_sha256": "44556437ef2af53891e35c9b1d69f50e9d5ad087ad758ce694df77d405b0d64a"
+    },
+    "case_00481": {
+      "case_id": "case_00481",
+      "ground_truth_sha256": "ffb72475e1bb27ac75b5dd75126256f2da50012b48986a4cf5bca5038a1b735d",
+      "image_sha256": "34a1d7d548a73570889ab136275ef65c95c178a674ad8fd97ffeefc917c50674"
+    },
+    "case_00482": {
+      "case_id": "case_00482",
+      "ground_truth_sha256": "75ffa27521ad746f0340e0b20107364f855f2c325e5b68d9116c545a507b42d5",
+      "image_sha256": "56666b4260708c396173ab33d557b4288437a18b8b72a461ac0c3ca267ec0b86"
+    },
+    "case_00483": {
+      "case_id": "case_00483",
+      "ground_truth_sha256": "0281e12d53bc735ffefc8885450ed51af6046b0d07624c158e18d590730920f7",
+      "image_sha256": "26428a17b9d8b67ef1e1e6499a1dc004abe1f888e60a5bc36e377699e0f9cea2"
+    },
+    "case_00484": {
+      "case_id": "case_00484",
+      "ground_truth_sha256": "fdfdd1fa6785484bcbdc492fd370aeee12fd46366c0c1d53cd427f6406a29311",
+      "image_sha256": "9e32b0a5f618d5366dfcac1e217e872a669062a82aec5336f0e95c6ec952ba12"
+    },
+    "case_00485": {
+      "case_id": "case_00485",
+      "ground_truth_sha256": "f1e98da6f98468e3285e8bd8bafaaa38adf2ab1ab3f5db2be8790b023057e1e9",
+      "image_sha256": "1294ac6c3b3329b2ac569343335c193594081e8d8d13eabc05538b9ae891138b"
+    },
+    "case_00487": {
+      "case_id": "case_00487",
+      "ground_truth_sha256": "d6a788843c2b1622816bb492e9e458a8bfae487371eaf51c1c14c97943fdbfb9",
+      "image_sha256": "2d4fbc323b041bc45ff9bd2fcaf9301ff0ec8cc14b3c76073bb041b36fe1eb3e"
+    },
+    "case_00488": {
+      "case_id": "case_00488",
+      "ground_truth_sha256": "fe73a1e99eacf5aaa0f81cc10bb8415fe7db5f6393c3ab29a3f9b1bd4e270117",
+      "image_sha256": "e91c73accdb754954c64abb2c62dd17ce143f98178709b61b3abba6f0f318e7f"
+    },
+    "case_00489": {
+      "case_id": "case_00489",
+      "ground_truth_sha256": "031c8b0bcfc34fc8bbff86d5698ac08e62ec4b76ee5d0df31b64d4d26dfc8bba",
+      "image_sha256": "9c38fa4751feba4694047d339c8772bceba75e0a335379aadc866f396a86670e"
+    },
+    "case_00490": {
+      "case_id": "case_00490",
+      "ground_truth_sha256": "d4ac00cd06ab6edfb032ac56a92672834e7019cde15248f73ce50077d2373c8f",
+      "image_sha256": "d4ae1b0a04a1eff4fa0b95e8dc6ddbf7a5ae1508c3a34d5e804bce63f84cc474"
+    },
+    "case_00492": {
+      "case_id": "case_00492",
+      "ground_truth_sha256": "94cf77a73d6609e28e1855738c53e25860a609bdd8aabf20f418169ff62ba19b",
+      "image_sha256": "29cc81964c5d35aab472577dd05eec4ef156f814bb3b21715eac500c69b4095d"
+    },
+    "case_00495": {
+      "case_id": "case_00495",
+      "ground_truth_sha256": "15b48e438866b7726d86e7db2154deb47c61f9f27c8cfd6cd4596772bf12d346",
+      "image_sha256": "1a59dda336a322b1076badc03742fee71e3c0caaaffce195891b81f11fd385ee"
+    },
+    "case_00496": {
+      "case_id": "case_00496",
+      "ground_truth_sha256": "c9ff71dcb78eaee01cff3d7f5db22848cd2ae52d3c255a0bc9c13a413c52c327",
+      "image_sha256": "db7bd841a6e5fcc80e2213fee90d456acb5fcfaa71f858b7fdb0e3e0b3f96331"
+    },
+    "case_00499": {
+      "case_id": "case_00499",
+      "ground_truth_sha256": "662a876e5b8083a38f4e3a2bffb65c6e4854fe7b5d31954b5c401af37209ecc5",
+      "image_sha256": "12976f684a045ec5fd80d5e594aac1556a0df687b2759b856921bb9882ff3253"
+    },
+    "case_00500": {
+      "case_id": "case_00500",
+      "ground_truth_sha256": "495cc6cd1f7c44895846be0c8c9899c04c04a34bbdfcb07102a1229e7b69224a",
+      "image_sha256": "f46c5d4f7ee40ab50dd961fda5cadd45f41171e467db4df6374bfc1b24721968"
+    },
+    "case_00501": {
+      "case_id": "case_00501",
+      "ground_truth_sha256": "c5835513b1d9dcdb1561d8bd2c97814e663ecb5eee7835168f4a138fb55b653a",
+      "image_sha256": "fb8d5495ddd11737ec34963932f609ed40aa17857885746d1aa4200331e83506"
+    },
+    "case_00503": {
+      "case_id": "case_00503",
+      "ground_truth_sha256": "e66d309ffcef9c45b36cb38698541817db96ff3792780f26808b1ba5b9e0cd07",
+      "image_sha256": "17215f0d7c200a45fe65cc2615429211b90c714ba4811bda0b9c81e302d0d7de"
+    },
+    "case_00504": {
+      "case_id": "case_00504",
+      "ground_truth_sha256": "404c2275948ad42a68bc851109b3bc2fc4ccec2c0d5cfd690cab6a90ccc84ef2",
+      "image_sha256": "2fd5c100a2a79943a534159d61edf598b4d4c30018f6bcfe57c492cd58404834"
+    },
+    "case_00505": {
+      "case_id": "case_00505",
+      "ground_truth_sha256": "fcd8dd26ed4341c7a9333e6e5c7a60fb7f268bc10bdf6d56cc8f8b5fdafaa228",
+      "image_sha256": "39269725b76afa8057d4c0e2c0630c8b18419b655af0c061b1fd691ebad7fab6"
+    },
+    "case_00506": {
+      "case_id": "case_00506",
+      "ground_truth_sha256": "a6f7688cbe5e2b8b58183359ccd3d92f88c324a0092ee6ed1262eb287c99f64f",
+      "image_sha256": "439376574bfef70d7cb2f3e4a2d1bc9b227e6f7341223382bec8d9557654006d"
+    },
+    "case_00507": {
+      "case_id": "case_00507",
+      "ground_truth_sha256": "2236d8abe06586e6985413ac4cbda80f86082982269cd0e01b9c74d996f4e0bb",
+      "image_sha256": "91419b870fe6d37634b9b2a4b0dd3386349d7d5e0ce6fe22d86f442d042603e7"
+    },
+    "case_00509": {
+      "case_id": "case_00509",
+      "ground_truth_sha256": "960d93476200aed8aef9eaf35344204b84ed57bb5cd8022cda22256671e2ad6d",
+      "image_sha256": "837cac1570351a80dedf0a69492c27a02420aea85443206029ca9dd5a07f016a"
+    },
+    "case_00510": {
+      "case_id": "case_00510",
+      "ground_truth_sha256": "6caadd645549f6df90e9bba31fc28993f015da712d06b0ab4ec60a075569faa4",
+      "image_sha256": "1a58f845f25fbd704231e8c34fbed8b36fb5273c14e342007ba2542c0735e26e"
+    },
+    "case_00511": {
+      "case_id": "case_00511",
+      "ground_truth_sha256": "ec574f6fc826990fe33c26b96b6875a46a7436b1cc694a3cea4a48a35237ca17",
+      "image_sha256": "b7860157bb0638439cc946f26eed7de067093e3b5aab804d15a4e7d7f7e37cc6"
+    },
+    "case_00512": {
+      "case_id": "case_00512",
+      "ground_truth_sha256": "298c4e57e67e57fa9f6a9932fa4ceaf1d751118a0721ebaaa9ef0d9d1c1d58ea",
+      "image_sha256": "aad1134851fb68081cf82b2ed583213f3c093fbeaa7926fa6ac745b76874bcb2"
+    },
+    "case_00513": {
+      "case_id": "case_00513",
+      "ground_truth_sha256": "35de48837a2fb8b9ed5ebda99d1221e758fa73df17906f2c332722fa155674aa",
+      "image_sha256": "dd6fbebfaef81bcdd2ec26ee820890e0b0885dc4558d318c1342591e22a7191d"
+    },
+    "case_00515": {
+      "case_id": "case_00515",
+      "ground_truth_sha256": "22dc319c2e3119a59018a324b075bc801e74ed9f00b43ead875ba9d5941716f3",
+      "image_sha256": "4cd323fe940b6b4027156c1bc04d8ec7de163422a13ecdbd728376db347debd3"
+    },
+    "case_00516": {
+      "case_id": "case_00516",
+      "ground_truth_sha256": "d96664b3988c371dfecc99c0ac877aa7fd74eef2a9aec6fa4a0130cbf594a0d5",
+      "image_sha256": "ec558682db0b6b5d333f7dcfd8445367db88bc02e90c5645ac4d622a9c409387"
+    },
+    "case_00517": {
+      "case_id": "case_00517",
+      "ground_truth_sha256": "41a5ec9ffe43e3ddbe4e521ebb6c5f7252c377454f8c9683c0d704e20197561c",
+      "image_sha256": "9d7bd9b39b240d8e57bca19e332fe41d66aba44b8b503ab03dd9435149c6c22a"
+    },
+    "case_00518": {
+      "case_id": "case_00518",
+      "ground_truth_sha256": "223dd551ffc9b9af659e9e0230fc91e7e1df0ac816debe6accd8b1ba9a0c48a2",
+      "image_sha256": "d6fc7ff2790b844ca57e3183aee8caba0df1beb90f2f77aaa4f5e5197c1ae10e"
+    },
+    "case_00519": {
+      "case_id": "case_00519",
+      "ground_truth_sha256": "3e4fbbcb903d7cea37dc46eea61babb37c27344cb5914343e0c57691b19c4b66",
+      "image_sha256": "2742c108270528bda67d357a5ea343d4503785dc8d56c56b130fc0788953eeb7"
+    },
+    "case_00521": {
+      "case_id": "case_00521",
+      "ground_truth_sha256": "e82e66edbb0e26790babe4fe0b0016661e225e03753f5cf513cb6bcfcf2a7871",
+      "image_sha256": "e3ccd334a04df21917a60d1a7d45bd30016293f4e15d28f318ac0a9f5207e218"
+    },
+    "case_00522": {
+      "case_id": "case_00522",
+      "ground_truth_sha256": "42e8281d63bc502daf1a6446a623791951692174011fd3736d487d1216a88614",
+      "image_sha256": "0bcfb6d28488c5fca6b6df70dce49cdd0e4e2f752bb5710e6e83a845a07521df"
+    },
+    "case_00523": {
+      "case_id": "case_00523",
+      "ground_truth_sha256": "20b99e47e910fd96e28c4661db53a373574ff9a03b74957d3232d6bae2038755",
+      "image_sha256": "1f41c819589bbd47f3abebd9c905a935b190d91474d1dc8f3ed2150f9ebff08c"
+    },
+    "case_00526": {
+      "case_id": "case_00526",
+      "ground_truth_sha256": "b4182648fb6e0c873344895e11eec0170eec2edccf80c5f387496ed8a1e881f4",
+      "image_sha256": "aa4420a8031b0514db660105e262055e287beda1037e600556d916084c476bd8"
+    },
+    "case_00528": {
+      "case_id": "case_00528",
+      "ground_truth_sha256": "74b8ae930bbffb87cdc1468e64a5208eb906925466e7519b89a6236655592fe4",
+      "image_sha256": "b7f1d5a03ab706a2c8647a03e4ccf11864285caaedf9080528ad26ff991e826b"
+    },
+    "case_00529": {
+      "case_id": "case_00529",
+      "ground_truth_sha256": "f8a98b0d022ed7f52f5979728e1d9a9c236b95f761b8e4fbb7c71380ad4ea39c",
+      "image_sha256": "223942b7ce7e5bf962d9f98e4aeb598cd62f92d38fe2514a8c3566512f2cd753"
+    },
+    "case_00530": {
+      "case_id": "case_00530",
+      "ground_truth_sha256": "fa14261d0c6f27b2325cb763c090dae24482f5c6cd07ed20eeee5807dc56a494",
+      "image_sha256": "ccafa1711dfb9895591132a8bce256255ef1b816ee5a4699f80f4ac167366fc0"
+    },
+    "case_00532": {
+      "case_id": "case_00532",
+      "ground_truth_sha256": "468b728d6e433d9b0581080e52705be4252b82dd8d55ebedfff11b1141b7a99a",
+      "image_sha256": "b86e2b607215dfd7535003b18e1d61379aa991af68d4413ad93ecf44455bd225"
+    },
+    "case_00534": {
+      "case_id": "case_00534",
+      "ground_truth_sha256": "3c73401fd3d7e641fce46b9b5689420f6c819004602e3e4aada1e9436331a95f",
+      "image_sha256": "8c8d8618d98830defbf42b70be1c83a8a70046f7835ab31292a9c6e0bb6977d3"
+    },
+    "case_00535": {
+      "case_id": "case_00535",
+      "ground_truth_sha256": "b36acbdf116e3e158a7dcde77c65e9abc1e2c62097a0aa55d318ccffafdb1705",
+      "image_sha256": "3fd0d2fb3e2d5cc6100b7eec84230536590a2bbaf549ec704fb5f7ae8b225e90"
+    },
+    "case_00536": {
+      "case_id": "case_00536",
+      "ground_truth_sha256": "f101f62dc2170c1ce29bd357c9572935f978fbc7e41b19d7b5de08dae983e1b0",
+      "image_sha256": "a9445a98b10adcd7f36acbfff2cb0895a30ac6fc7c8cf37d3e3657ae176dd9e1"
+    },
+    "case_00539": {
+      "case_id": "case_00539",
+      "ground_truth_sha256": "1d6d9dd74f4bcfa184880c8405a9e3dc33c015f804b9f43677d48fc86d7ce0b6",
+      "image_sha256": "31e85d3bb5645dba56fc08d8a12a7923b424be22c54f83413018216585d1ea2d"
+    },
+    "case_00540": {
+      "case_id": "case_00540",
+      "ground_truth_sha256": "5ae57cdf864b204c7d2363f760ae4a8bb4fd9f4e62772a81fd9fc2a7f83da237",
+      "image_sha256": "7ffd7e0d564363b0e6f6397dfd433159fb7cfb03b723176f6645636a1a569c8e"
+    },
+    "case_00541": {
+      "case_id": "case_00541",
+      "ground_truth_sha256": "44e4e4a4560ffec7dfa10512d9ee207894ea21b0d90bed82f7882fcca3243be2",
+      "image_sha256": "e2fc1dbd0c7156b40a0c145478806f16b09bc0c638e957bf8c62169fbfcf30b1"
+    },
+    "case_00542": {
+      "case_id": "case_00542",
+      "ground_truth_sha256": "2b897c587b962be60e4219485d2338c99e981bd7959753750673b5950e3efbba",
+      "image_sha256": "771afa981e356ecc37f6e072855886fe3033b30842a93bef9da0f1ad5f3ea394"
+    },
+    "case_00543": {
+      "case_id": "case_00543",
+      "ground_truth_sha256": "6b5d675f24f560f20617179caac88ac5761511556c64dc6dbcd36ed28888e9d3",
+      "image_sha256": "21ce6f1eb8e508f039e140245671976c653b0836fabe2e33afe5e337f34b7d5e"
+    },
+    "case_00544": {
+      "case_id": "case_00544",
+      "ground_truth_sha256": "ba97bea92a44e35ed3bee0977e33a2f889ab2328177c10ea978d80f829b0431a",
+      "image_sha256": "d0cf0b63031f6899f7ab0902704c820067df3624d7f0f18e311d8bab77dc435e"
+    },
+    "case_00545": {
+      "case_id": "case_00545",
+      "ground_truth_sha256": "bb7220cfc21fde242fa5d0ba6c38a8a7153d422a493fee8bf739c694705f1790",
+      "image_sha256": "85c04da7cfce8bcd9da58c0fd21e4e9c085cd6fee9e478d0aef15f027ae00ad2"
+    },
+    "case_00546": {
+      "case_id": "case_00546",
+      "ground_truth_sha256": "3420c751a97a3f53487cf183acf44fe89326f4cc2bfd831f1b2d8b13b8b3f1bd",
+      "image_sha256": "93250afa24b8dd76decc893d2a4c984ad4155bad7b81aec786a4d52c9ccd1678"
+    },
+    "case_00549": {
+      "case_id": "case_00549",
+      "ground_truth_sha256": "da44d8a818a82752dcb8482f29bf6adb0d6e4cea7a33865dec26a136e9330bcd",
+      "image_sha256": "e6537f64a53b6d7bbf410ef07b10d13532e3914c81db2ed7586e2e99a19e4670"
+    },
+    "case_00550": {
+      "case_id": "case_00550",
+      "ground_truth_sha256": "4c188655b157147528c51341974d9ce59bcb4d34c15553debf15a506fe49765b",
+      "image_sha256": "c91d31cce7c6615f7f4ed9a63ed35cedb3d0cc0d8fed170264e401949ff434ba"
+    },
+    "case_00551": {
+      "case_id": "case_00551",
+      "ground_truth_sha256": "98ac3e85c19f768b6c7849c2a9bec4d8f47b45d1a32960d46cf52bdbdbbacf93",
+      "image_sha256": "ea96c45be3fed1fcf5339ceb410f57bda3e0f769a547232c05c510ac09b40f9f"
+    },
+    "case_00552": {
+      "case_id": "case_00552",
+      "ground_truth_sha256": "18f1f9023b5c1260408b2939ae9c060ffceddbed20defb1fa60ef46875f7a2bf",
+      "image_sha256": "38c8eba9390cfebfd7b5b60b6ba3fdfb48965a6f323176ea488935e528a3c724"
+    },
+    "case_00554": {
+      "case_id": "case_00554",
+      "ground_truth_sha256": "10fd29c788b3d80b4d81e18c05be1c6737ebab20c6f4781239a3fe13c77cac0e",
+      "image_sha256": "e2cdd4566579a767254a35c8add41e4fe03dbd9ea3c89e3d54a7333a541f86dd"
+    },
+    "case_00555": {
+      "case_id": "case_00555",
+      "ground_truth_sha256": "e674707032a484c0a44918e19b85b3df000f51a99d42a120acb8d07281a62958",
+      "image_sha256": "80332a4c81f65943dcbc5eb75de20669aec1278444ce85139ef19509f6653840"
+    },
+    "case_00556": {
+      "case_id": "case_00556",
+      "ground_truth_sha256": "051502bcf6db09aa1997e4a4431a96af9dd73b5d1a4e923e9195d03bb1901bee",
+      "image_sha256": "a124066bc552d2371bc1b35a19b723c8e2c147e38fb396639a70ff8de583f805"
+    },
+    "case_00557": {
+      "case_id": "case_00557",
+      "ground_truth_sha256": "c005a41c928b7d76ac42a70ad9ad801d5b1a3f517684b5c502fb088519bf7986",
+      "image_sha256": "06eb2325c9c2d3b6717a8e0b6bc8058172578ff9c07a26c4b8ba64f577516036"
+    },
+    "case_00558": {
+      "case_id": "case_00558",
+      "ground_truth_sha256": "780e15f5ce3fd96415c210eee8c2e7756f3861f5e4787092ee98a9021df80d75",
+      "image_sha256": "8e3c94f0a820cbe2be0fbdb3bc4465c0a13b62f3981a9ed712679aa9c444f03e"
+    },
+    "case_00559": {
+      "case_id": "case_00559",
+      "ground_truth_sha256": "cde75d1e7bf87ebb57a92513dcb0c9d7a29d7db3fc18f303713aff9a052c5c96",
+      "image_sha256": "fc9e1c70bc00212ec3550f623e1920f02e3d4aebe4800dc39d92e2907d62994d"
+    },
+    "case_00560": {
+      "case_id": "case_00560",
+      "ground_truth_sha256": "8d356e2c41e4818baf9de634683f8de2b5c2a6eeae0817cde7ba6fa8ab27c44b",
+      "image_sha256": "1d891b3e20c589bcd797f9a11323415cdec2476abb375c1c7289212344b43c5d"
+    },
+    "case_00561": {
+      "case_id": "case_00561",
+      "ground_truth_sha256": "87b3728a58dff57b4fd815f25b9a039023fbe3352b98d4d5e05c13d5f4406ab1",
+      "image_sha256": "0b3d0c6035118808ae4ae3cfd411aee340adc45467dc64c503afa1028b7bdcc5"
+    },
+    "case_00562": {
+      "case_id": "case_00562",
+      "ground_truth_sha256": "e4fbed734ccf6fc0624e974115e56232f92d00c83db10cbd15594061448f4a8b",
+      "image_sha256": "796f80a89c3fc7121dcdeedcf81ff5cc4213bf74a6438b598655a43e37ef75c3"
+    },
+    "case_00563": {
+      "case_id": "case_00563",
+      "ground_truth_sha256": "1e0d92b913b892615fee35744e6c874123ad8548a5be4cbde0817d077eaafe2d",
+      "image_sha256": "17bded08c50bece865608ed35a9ac146c3b3f4e1da2b12cd6bcbf2cb6bea724f"
+    },
+    "case_00564": {
+      "case_id": "case_00564",
+      "ground_truth_sha256": "9d8cc2e9bf1fd550fe253d1e8a4bce3e4a78bf19f642a883edf2620a045f9d20",
+      "image_sha256": "70b3361a9f3b2344341326110e4cd3216b7d2b773db224e7fd0aa1668048caa4"
+    },
+    "case_00565": {
+      "case_id": "case_00565",
+      "ground_truth_sha256": "b751be0012940f8ecd761e1b0806d5dbd9c1c05f60d0563cf9f22bf542d2768b",
+      "image_sha256": "5f809b3cda5e9c9d7916ccba4745e41c16410075e733450a15945ccb72559aff"
+    },
+    "case_00566": {
+      "case_id": "case_00566",
+      "ground_truth_sha256": "8988dd6f346d11472e390e4128f5b70d0520946d3df5f985db72fd034dcc3aec",
+      "image_sha256": "ae4dfde8f243e62a303d9b0207a4769982c3a1b881ecca0551758f1c60e92966"
+    },
+    "case_00567": {
+      "case_id": "case_00567",
+      "ground_truth_sha256": "0db70e576a7e44d97886f281d0a18fd0a102674614dd25c3324113bdf1c51ef5",
+      "image_sha256": "78786557e1d193ed25d62886b4472a9b4ce531c6b64f0867751d33af40f9570f"
+    },
+    "case_00568": {
+      "case_id": "case_00568",
+      "ground_truth_sha256": "bfd981b34aa574f2615729baf83c3e8f4f2893c1ed38ce90cfbf6e14ab645326",
+      "image_sha256": "362442f6d600d81bde77caaacf429a46b8d4e4d716e04c4879151d98168e7613"
+    },
+    "case_00570": {
+      "case_id": "case_00570",
+      "ground_truth_sha256": "e8fed3caf00897feef48f9827ebe65ea1631dcd9599ee8615af46e9ff7dc82f4",
+      "image_sha256": "d921ec4cb7908a9de58c6a3368fe069179e4b6ed43188b7b7f18853f8ec95490"
+    },
+    "case_00571": {
+      "case_id": "case_00571",
+      "ground_truth_sha256": "0cd52429727ee6978e8468d551fc98dc08d055de1099daf2d6b8c5110accb82d",
+      "image_sha256": "ceedefe5d2b6f37e86865dfadc1b4746be3410600d96e7e8b2767fb61899233b"
+    },
+    "case_00572": {
+      "case_id": "case_00572",
+      "ground_truth_sha256": "461f4afc6948dc997198e1e473d1e74ef78eab377f77664a8d1e8188ac724490",
+      "image_sha256": "06b8aed1ab889311c805d7a55a4b7b71e7b60737e234ff428d922785b6cc0785"
+    },
+    "case_00574": {
+      "case_id": "case_00574",
+      "ground_truth_sha256": "1d0f925b66be20816a7d7c520b7bda37488365933f4b719f912ea3d23f375d56",
+      "image_sha256": "824f0a93f50f9211b96801c350780d084e07d12e78974f562667ff21f4cb8a00"
+    },
+    "case_00576": {
+      "case_id": "case_00576",
+      "ground_truth_sha256": "04ad3e6975b2aa375bf2e5e8b0fe6661a0df961d44ae75056c5cf99e230ab6e1",
+      "image_sha256": "adaa8b51fdbb98d758e3bb71a8925a15a0255f098f943bd424f624f762f58183"
+    },
+    "case_00578": {
+      "case_id": "case_00578",
+      "ground_truth_sha256": "4c7c7312a4a48c4c3d58e9dff739848f326413eb8b63d3c002ad8bb1c56f4bb4",
+      "image_sha256": "9350e2b8a00df6d73ac1ad698c27ee63def7173cadb06707ca2e95fd8c7bfea2"
+    },
+    "case_00579": {
+      "case_id": "case_00579",
+      "ground_truth_sha256": "d691ef2da3f9aa323417c743b21f9f9e7149704f9b73945cc072d050320da2ec",
+      "image_sha256": "ac66b8b350812f28f7de1a9e368e016d21547a166396d09863a566c9d0d826c7"
+    },
+    "case_00580": {
+      "case_id": "case_00580",
+      "ground_truth_sha256": "6c7457e8ec113e5684c3cc3c5d80f81d872be5220d0add9c6d1f698c0705e2aa",
+      "image_sha256": "21778a1bc9c0668fb1b978719dac4c5ccff30b9b547984175a94eff39e67a49a"
+    },
+    "case_00581": {
+      "case_id": "case_00581",
+      "ground_truth_sha256": "882fc72214706aeda7aeb7f4cc6ed03e01d364419fac882f6b74dce785bd0720",
+      "image_sha256": "7051f295fe592e6ccf73bedbe8d657fa2b9282b4ecfb80718e22c93656694ca6"
+    },
+    "case_00584": {
+      "case_id": "case_00584",
+      "ground_truth_sha256": "33d04b7d1153184deddbb654a0248c3d3b7ea16f0f98fbc979dc91c415ccd88b",
+      "image_sha256": "943b239d06c547cfdc6195ebb7fe7149ed0c8b1f1efab1d72ee2b99b2342708d"
+    },
+    "case_00585": {
+      "case_id": "case_00585",
+      "ground_truth_sha256": "062e691ea40b288ce224c93551ed71accf6e68971ba4c96032e6032e6a27c349",
+      "image_sha256": "8ec6bd33d517514407df3b94991725f59534b15d696d75046d74d1c1d4bbd307"
+    },
+    "case_00586": {
+      "case_id": "case_00586",
+      "ground_truth_sha256": "ea93e8fdfe6bf795629add03bea0469e4ed36ecbc493a6baeeb7ceebd8513658",
+      "image_sha256": "5a0817b9d8211c473c9ca94ef9e5f2aacb55148fd88af0ac75d9ac423ebf0fdd"
+    },
+    "case_00587": {
+      "case_id": "case_00587",
+      "ground_truth_sha256": "04cb57e5c0d148f894b7faed1be5afd0e0b5e6a438761fc68d085bc1134da833",
+      "image_sha256": "825d36f39ff3ad1d3f5a5279138c0a111d51227924eb0e8db27da2f1843ff5cf"
+    },
+    "case_00588": {
+      "case_id": "case_00588",
+      "ground_truth_sha256": "93768471fcae88350fa89ed47d3d1d7ee230e92ef9c7584cd7920b6536f2c0dd",
+      "image_sha256": "487e766c573f3455e23016e3e16952dd1e704da06bd433ac93dcdb36b4e2bd6b"
+    }
+  },
+  "partition": {
+    "development": {
+      "case_count": 289,
+      "case_ids": [
+        "case_00000",
+        "case_00001",
+        "case_00002",
+        "case_00017",
+        "case_00047",
+        "case_00063",
+        "case_00109",
+        "case_00116",
+        "case_00142",
+        "case_00143",
+        "case_00171",
+        "case_00190",
+        "case_00193",
+        "case_00200",
+        "case_00237",
+        "case_00255",
+        "case_00275",
+        "case_00293",
+        "case_00297",
+        "case_00299",
+        "case_00416",
+        "case_00418",
+        "case_00463",
+        "case_00471",
+        "case_00473",
+        "case_00474",
+        "case_00479",
+        "case_00480",
+        "case_00481",
+        "case_00482",
+        "case_00003",
+        "case_00004",
+        "case_00006",
+        "case_00013",
+        "case_00041",
+        "case_00042",
+        "case_00044",
+        "case_00054",
+        "case_00055",
+        "case_00059",
+        "case_00061",
+        "case_00077",
+        "case_00094",
+        "case_00106",
+        "case_00114",
+        "case_00136",
+        "case_00141",
+        "case_00147",
+        "case_00151",
+        "case_00155",
+        "case_00158",
+        "case_00159",
+        "case_00168",
+        "case_00174",
+        "case_00181",
+        "case_00185",
+        "case_00187",
+        "case_00199",
+        "case_00204",
+        "case_00209",
+        "case_00211",
+        "case_00217",
+        "case_00218",
+        "case_00226",
+        "case_00230",
+        "case_00238",
+        "case_00244",
+        "case_00250",
+        "case_00258",
+        "case_00276",
+        "case_00291",
+        "case_00296",
+        "case_00401",
+        "case_00407",
+        "case_00419",
+        "case_00426",
+        "case_00430",
+        "case_00434",
+        "case_00435",
+        "case_00438",
+        "case_00449",
+        "case_00469",
+        "case_00485",
+        "case_00489",
+        "case_00492",
+        "case_00501",
+        "case_00515",
+        "case_00530",
+        "case_00532",
+        "case_00536",
+        "case_00539",
+        "case_00540",
+        "case_00557",
+        "case_00559",
+        "case_00563",
+        "case_00565",
+        "case_00574",
+        "case_00584",
+        "case_00586",
+        "case_00588",
+        "case_00007",
+        "case_00009",
+        "case_00020",
+        "case_00021",
+        "case_00022",
+        "case_00024",
+        "case_00031",
+        "case_00032",
+        "case_00033",
+        "case_00034",
+        "case_00037",
+        "case_00038",
+        "case_00039",
+        "case_00043",
+        "case_00046",
+        "case_00049",
+        "case_00051",
+        "case_00056",
+        "case_00057",
+        "case_00058",
+        "case_00060",
+        "case_00066",
+        "case_00068",
+        "case_00069",
+        "case_00070",
+        "case_00072",
+        "case_00073",
+        "case_00078",
+        "case_00080",
+        "case_00081",
+        "case_00082",
+        "case_00084",
+        "case_00087",
+        "case_00089",
+        "case_00091",
+        "case_00095",
+        "case_00096",
+        "case_00099",
+        "case_00102",
+        "case_00103",
+        "case_00105",
+        "case_00107",
+        "case_00108",
+        "case_00111",
+        "case_00112",
+        "case_00113",
+        "case_00117",
+        "case_00118",
+        "case_00121",
+        "case_00123",
+        "case_00126",
+        "case_00127",
+        "case_00128",
+        "case_00130",
+        "case_00131",
+        "case_00132",
+        "case_00140",
+        "case_00144",
+        "case_00145",
+        "case_00146",
+        "case_00150",
+        "case_00152",
+        "case_00156",
+        "case_00160",
+        "case_00162",
+        "case_00163",
+        "case_00165",
+        "case_00176",
+        "case_00177",
+        "case_00180",
+        "case_00184",
+        "case_00186",
+        "case_00188",
+        "case_00189",
+        "case_00196",
+        "case_00197",
+        "case_00207",
+        "case_00208",
+        "case_00219",
+        "case_00220",
+        "case_00221",
+        "case_00222",
+        "case_00224",
+        "case_00225",
+        "case_00228",
+        "case_00233",
+        "case_00234",
+        "case_00239",
+        "case_00240",
+        "case_00243",
+        "case_00247",
+        "case_00248",
+        "case_00249",
+        "case_00252",
+        "case_00253",
+        "case_00256",
+        "case_00257",
+        "case_00259",
+        "case_00260",
+        "case_00261",
+        "case_00266",
+        "case_00267",
+        "case_00268",
+        "case_00271",
+        "case_00277",
+        "case_00279",
+        "case_00280",
+        "case_00284",
+        "case_00286",
+        "case_00287",
+        "case_00290",
+        "case_00400",
+        "case_00404",
+        "case_00405",
+        "case_00410",
+        "case_00411",
+        "case_00414",
+        "case_00417",
+        "case_00420",
+        "case_00421",
+        "case_00422",
+        "case_00423",
+        "case_00428",
+        "case_00429",
+        "case_00436",
+        "case_00437",
+        "case_00439",
+        "case_00442",
+        "case_00445",
+        "case_00447",
+        "case_00450",
+        "case_00453",
+        "case_00455",
+        "case_00458",
+        "case_00459",
+        "case_00461",
+        "case_00464",
+        "case_00465",
+        "case_00466",
+        "case_00467",
+        "case_00468",
+        "case_00475",
+        "case_00476",
+        "case_00478",
+        "case_00483",
+        "case_00484",
+        "case_00490",
+        "case_00495",
+        "case_00496",
+        "case_00499",
+        "case_00500",
+        "case_00503",
+        "case_00505",
+        "case_00507",
+        "case_00509",
+        "case_00510",
+        "case_00511",
+        "case_00512",
+        "case_00513",
+        "case_00517",
+        "case_00519",
+        "case_00521",
+        "case_00522",
+        "case_00523",
+        "case_00526",
+        "case_00528",
+        "case_00529",
+        "case_00535",
+        "case_00542",
+        "case_00544",
+        "case_00549",
+        "case_00554",
+        "case_00555",
+        "case_00556",
+        "case_00558",
+        "case_00560",
+        "case_00561",
+        "case_00564",
+        "case_00566",
+        "case_00567",
+        "case_00568",
+        "case_00570",
+        "case_00571",
+        "case_00572",
+        "case_00576",
+        "case_00578",
+        "case_00579",
+        "case_00585",
+        "case_00587"
+      ]
+    },
+    "method": "SHA-256 ranking of additional IDs; test, then validation",
+    "seed": 20260905,
+    "test": {
+      "case_count": 120,
+      "case_ids": [
+        "case_00005",
+        "case_00011",
+        "case_00014",
+        "case_00015",
+        "case_00018",
+        "case_00023",
+        "case_00025",
+        "case_00026",
+        "case_00030",
+        "case_00035",
+        "case_00040",
+        "case_00048",
+        "case_00050",
+        "case_00062",
+        "case_00067",
+        "case_00071",
+        "case_00076",
+        "case_00079",
+        "case_00085",
+        "case_00092",
+        "case_00097",
+        "case_00098",
+        "case_00101",
+        "case_00110",
+        "case_00119",
+        "case_00120",
+        "case_00122",
+        "case_00124",
+        "case_00133",
+        "case_00134",
+        "case_00135",
+        "case_00137",
+        "case_00139",
+        "case_00148",
+        "case_00153",
+        "case_00154",
+        "case_00157",
+        "case_00161",
+        "case_00166",
+        "case_00169",
+        "case_00170",
+        "case_00173",
+        "case_00178",
+        "case_00182",
+        "case_00183",
+        "case_00191",
+        "case_00192",
+        "case_00198",
+        "case_00201",
+        "case_00202",
+        "case_00205",
+        "case_00206",
+        "case_00210",
+        "case_00212",
+        "case_00214",
+        "case_00215",
+        "case_00229",
+        "case_00231",
+        "case_00232",
+        "case_00236",
+        "case_00241",
+        "case_00242",
+        "case_00245",
+        "case_00254",
+        "case_00263",
+        "case_00265",
+        "case_00269",
+        "case_00270",
+        "case_00272",
+        "case_00273",
+        "case_00278",
+        "case_00281",
+        "case_00283",
+        "case_00285",
+        "case_00288",
+        "case_00292",
+        "case_00298",
+        "case_00402",
+        "case_00406",
+        "case_00408",
+        "case_00415",
+        "case_00427",
+        "case_00431",
+        "case_00432",
+        "case_00433",
+        "case_00440",
+        "case_00441",
+        "case_00443",
+        "case_00444",
+        "case_00446",
+        "case_00448",
+        "case_00451",
+        "case_00460",
+        "case_00472",
+        "case_00486",
+        "case_00491",
+        "case_00493",
+        "case_00494",
+        "case_00497",
+        "case_00498",
+        "case_00502",
+        "case_00508",
+        "case_00514",
+        "case_00520",
+        "case_00524",
+        "case_00525",
+        "case_00527",
+        "case_00531",
+        "case_00533",
+        "case_00537",
+        "case_00538",
+        "case_00547",
+        "case_00548",
+        "case_00553",
+        "case_00569",
+        "case_00573",
+        "case_00575",
+        "case_00577",
+        "case_00582",
+        "case_00583"
+      ]
+    },
+    "unit": "KiTS23 case ID",
+    "validation": {
+      "case_count": 80,
+      "case_ids": [
+        "case_00008",
+        "case_00010",
+        "case_00012",
+        "case_00016",
+        "case_00019",
+        "case_00027",
+        "case_00028",
+        "case_00029",
+        "case_00036",
+        "case_00045",
+        "case_00052",
+        "case_00053",
+        "case_00064",
+        "case_00065",
+        "case_00074",
+        "case_00075",
+        "case_00083",
+        "case_00086",
+        "case_00088",
+        "case_00090",
+        "case_00093",
+        "case_00100",
+        "case_00104",
+        "case_00115",
+        "case_00125",
+        "case_00129",
+        "case_00138",
+        "case_00149",
+        "case_00164",
+        "case_00167",
+        "case_00172",
+        "case_00175",
+        "case_00179",
+        "case_00194",
+        "case_00195",
+        "case_00203",
+        "case_00213",
+        "case_00216",
+        "case_00223",
+        "case_00227",
+        "case_00235",
+        "case_00246",
+        "case_00251",
+        "case_00262",
+        "case_00264",
+        "case_00274",
+        "case_00282",
+        "case_00289",
+        "case_00294",
+        "case_00295",
+        "case_00403",
+        "case_00409",
+        "case_00412",
+        "case_00413",
+        "case_00424",
+        "case_00425",
+        "case_00452",
+        "case_00454",
+        "case_00456",
+        "case_00457",
+        "case_00462",
+        "case_00470",
+        "case_00477",
+        "case_00487",
+        "case_00488",
+        "case_00504",
+        "case_00506",
+        "case_00516",
+        "case_00518",
+        "case_00534",
+        "case_00541",
+        "case_00543",
+        "case_00545",
+        "case_00546",
+        "case_00550",
+        "case_00551",
+        "case_00552",
+        "case_00562",
+        "case_00580",
+        "case_00581"
+      ]
+    }
+  },
+  "protocol_sha256": "b24f253282a2c0e12061d05c6846d71b1265f5e1e28f434421335eb6d7845877",
+  "revision": "block68-supervised100-earlystop-v1",
+  "runtime_identity": {
+    "compute_capability": [
+      12,
+      0
+    ],
+    "cublas_workspace_config": ":4096:8",
+    "cuda": "12.8",
+    "cuda_visible_devices": null,
+    "cudnn": 91002,
+    "gpu_name": "NVIDIA GeForce RTX 5070",
+    "gpu_total_bytes": 12820480000,
+    "gpu_uuid": "18fa2f4d-58ac-acc9-a2a9-89679dd4c04e",
+    "monai": "1.5.2",
+    "numpy": "1.24.4",
+    "nvidia_tf32_override": null,
+    "packages": {
+      "SimpleITK": "2.5.6",
+      "einops": "0.6.1",
+      "huggingface-hub": "1.29.0",
+      "nibabel": "5.2.1",
+      "scipy": "1.15.3"
+    },
+    "platform": "Windows",
+    "python": "3.11.16",
+    "torch": "2.8.0+cu128"
+  },
+  "script_sha256": "f3b66464c59c1b61c4d19de249cfb901158b79bfbcf344dca5b46b3ae0c66af6",
+  "settings": {
+    "amp": "CUDA FP16; GradScaler initial scale 128",
+    "augmentation": {
+      "flip_probability_per_axis": 0.5,
+      "intensity_scale": [
+        0.9,
+        1.1
+      ],
+      "intensity_shift": [
+        -0.1,
+        0.1
+      ]
+    },
+    "batch_size": 1,
+    "cache_dtype": "image float32, training label uint8; no held-out label cache",
+    "ct_window_hu": [
+      -200.0,
+      300.0
+    ],
+    "determinism": "seeded; deterministic algorithms warn_only=True; not bitwise CUDA reproducibility",
+    "early_stopping": {
+      "max_epochs": 100,
+      "min_delta": 0.0001,
+      "mode": "max",
+      "monitor": "validation selection_score",
+      "patience": 10,
+      "restore_policy": "select best committed validation checkpoint; training history remains intact"
+    },
+    "empty_class_rule": "both masks empty: Dice=1; exactly one empty: Dice=0",
+    "epochs": 100,
+    "inference": {
+      "accumulator": "CPU FP32",
+      "blend": "gaussian logits",
+      "overlap": 0.25,
+      "postprocessing": "none",
+      "restore": "argmax on resampled grid, then nearest to original CT grid",
+      "roi_size": [
+        96,
+        96,
+        96
+      ],
+      "sw_batch_size": 2,
+      "tta": false
+    },
+    "initialization": "random; never load Block 64 or NV weights",
+    "labels": {
+      "0": "background",
+      "1": "kidney",
+      "2": "tumor",
+      "3": "cyst"
+    },
+    "loss": "foreground soft Dice + four-class cross entropy; both weight 1; FP32 reductions",
+    "max_gradient_norm": 12.0,
+    "max_original_voxels": 277610496,
+    "max_resampled_voxels": 101083125,
+    "model": {
+      "architecture": "monai.UNet",
+      "channels": [
+        16,
+        32,
+        64,
+        128
+      ],
+      "dropout": 0.0,
+      "in_channels": 1,
+      "norm": "INSTANCE",
+      "num_res_units": 2,
+      "out_channels": 4,
+      "spatial_dims": 3,
+      "strides": [
+        2,
+        2,
+        2
+      ]
+    },
+    "optimizer": {
+      "lr": 0.0003,
+      "name": "AdamW",
+      "weight_decay": 1e-05
+    },
+    "patch_size": [
+      96,
+      96,
+      96
+    ],
+    "patches_per_case": 8,
+    "preprocessing": "closest RAS, native obliquity; linear CT, nearest labels; normalize [-1,1]",
+    "resume": "epoch boundaries; model, optimizer, scaler and torch CPU/CUDA RNG; interrupted epoch repeats",
+    "sampling": "uniform case permutation each epoch; uniform class among present classes then uniform voxel",
+    "schedule": "lr(epoch)=base_lr*0.5*(1+cos(pi*(epoch-1)/100)); validation every epoch; early stopping enabled",
+    "secondary": "reference-positive class Dice, reference-negative predicted mL, renal-envelope Dice",
+    "seed": 6501,
+    "selection": "maximum mean over validation cases of mean Dice for labels 1,2,3; earliest epoch breaks ties",
+    "spacing_mm": [
+      1.5,
+      1.5,
+      1.5
+    ],
+    "test_inference_enabled": false,
+    "validation_epochs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100
+    ]
+  },
+  "test_outputs_opened": false
+}
