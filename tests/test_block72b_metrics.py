@@ -132,12 +132,42 @@ class GeometryMetricTests(unittest.TestCase):
                 metrics72.binary_metrics(np.ones((3, 3, 3)), np.ones((3, 3, 3)), affine)
 
 
+class NativeGeometryTests(unittest.TestCase):
+    def image(self, unit, affine=None, shape=(4, 4, 4)):
+        return SimpleNamespace(shape=shape, affine=np.eye(4) if affine is None else affine,
+                               header=SimpleNamespace(get_xyzt_units=lambda: (unit, 'unknown')))
+
+    def test_missing_unit_in_both_headers_uses_frozen_kits23_mm_geometry(self):
+        affine = np.array([[0, 0, -0.81640625, 0], [0, -0.81640625, 0, 0],
+                           [-3, 0, 0, 0], [0, 0, 0, 1]], dtype=float)
+        image = self.image('unknown', affine)
+        geometry = metrics72.native_geometry_mm(image, image)
+        self.assertEqual(geometry['unit_source'], 'kits23_preprocessing')
+        self.assertEqual(geometry['reference_spatial_unit'], 'unknown')
+        self.assertEqual(geometry['voxel_spacing_mm'], [3.0, 0.81640625, 0.81640625])
+
+    def test_either_aligned_header_can_declare_mm(self):
+        for ct_unit, ref_unit in (('mm', 'unknown'), ('unknown', 'mm'), ('mm', 'mm')):
+            with self.subTest(ct_unit=ct_unit, ref_unit=ref_unit):
+                geometry = metrics72.native_geometry_mm(self.image(ct_unit), self.image(ref_unit))
+                self.assertEqual(geometry['unit_source'], 'nifti_header')
+
+    def test_missing_units_do_not_allow_mismatched_grids(self):
+        image = self.image('unknown')
+        with self.assertRaisesRegex(ValueError, 'shape mismatch'):
+            metrics72.native_geometry_mm(image, self.image('unknown', shape=(4, 4, 3)))
+        shifted = image.affine.copy()
+        shifted[0, 3] = 1.0
+        with self.assertRaisesRegex(ValueError, 'affine mismatch'):
+            metrics72.native_geometry_mm(image, self.image('unknown', shifted))
+
+
 class EvaluatorOrchestrationTests(unittest.TestCase):
     """Test validation-only routing and resumable receipts with a synthetic GPU API.
 
     This exercises the collector, not actual CUDA/MONAI execution.
     """
-    def fixture(self, root):
+    def fixture(self, root, *, ct_unit='unknown', reference_unit='unknown'):
         ids = [f'case_{i:05d}' for i in range(80)]
         plan = {'experiment_sha256': 'f' * 64, 'runtime': {'gpu': 'synthetic'},
                 'settings': {'model': {}, 'seed': 6501},
@@ -193,9 +223,11 @@ class EvaluatorOrchestrationTests(unittest.TestCase):
             use_deterministic_algorithms=lambda *args, **kwargs: None,
             load=lambda *args, **kwargs: {'experiment_sha256': plan['experiment_sha256'], 'arm': 'ct',
                     'epoch': 1, 'stats': {}, 'runtime': plan['runtime'], 'model': {}, 'model_state_sha256': 'state'})
-        nifti = SimpleNamespace(affine=np.eye(4), dataobj=array,
-                    header=SimpleNamespace(get_xyzt_units=lambda: ('mm', 'sec')))
-        nib = SimpleNamespace(load=lambda _: nifti)
+        def load_nifti(path):
+            unit = ct_unit if path == Path('synthetic_ct') else reference_unit
+            return SimpleNamespace(shape=array.shape, affine=np.eye(4), dataobj=array,
+                                   header=SimpleNamespace(get_xyzt_units=lambda: (unit, 'unknown')))
+        nib = SimpleNamespace(load=load_nifti)
         @contextmanager
         def checked_source(_):
             yield m, plan, plan, {**plan['runtime'], 'device_total_bytes': 100}
@@ -219,6 +251,10 @@ class EvaluatorOrchestrationTests(unittest.TestCase):
             self.assertEqual(len(archives), 1)
             summary = json.loads(archives[0].with_name('summary.json').read_text())
             self.assertEqual(summary['arms']['ct']['classes']['cyst']['cases'], 80)
+            protocol = json.loads(archives[0].with_name('protocol.json').read_text())
+            geometry = protocol['validation_native_geometry']
+            self.assertEqual(len(geometry), 80)
+            self.assertEqual(geometry['case_00000']['unit_source'], 'kits23_preprocessing')
 
     def test_check_stage_does_not_run_inference_and_selection_mismatch_fails(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -231,6 +267,16 @@ class EvaluatorOrchestrationTests(unittest.TestCase):
                 selection['checkpoint_sha256'] = 'changed'
                 with self.assertRaises(ValueError):
                     metrics72.execute(root, args)
+
+    def test_metrics_reject_explicit_non_mm_units_before_inference(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            checked, torch, nib, loads, _, _ = self.fixture(root, ct_unit='mm', reference_unit='micron')
+            args = SimpleNamespace(stage='metrics', arm='ct')
+            with patch.object(metrics72, 'checked_source', checked), patch.dict(sys.modules, {'torch': torch, 'nibabel': nib}), redirect_stdout(io.StringIO()):
+                with self.assertRaisesRegex(ValueError, r'case_00000: .*CT=mm, reference=micron'):
+                    metrics72.execute(root, args)
+            self.assertEqual(loads, [])
 
     def test_corrupt_saved_case_receipt_is_not_reused(self):
         with tempfile.TemporaryDirectory() as directory:

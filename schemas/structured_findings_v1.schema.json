@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vista3d-tfg.local/schemas/structured_findings_v1.schema.json",
+  "title": "VISTA3D TFG Structured Case Findings",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "case_id",
+    "ground_truth_used",
+    "clinical_validation",
+    "automatic_measurements",
+    "interactive_cyst",
+    "evidence",
+    "limitations"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "case_id": {
+      "type": "string",
+      "pattern": "^case_[0-9]{5}$"
+    },
+    "ground_truth_used": {
+      "const": false
+    },
+    "clinical_validation": {
+      "const": false
+    },
+    "automatic_measurements": {
+      "type": "object",
+      "required": [
+        "left_kidney_core_volume_ml",
+        "right_kidney_core_volume_ml",
+        "automatic_left_cyst_volume_ml",
+        "automatic_right_cyst_volume_ml",
+        "labels_present"
+      ],
+      "properties": {
+        "left_kidney_core_volume_ml": {
+          "type": "number",
+          "minimum": 0
+        },
+        "right_kidney_core_volume_ml": {
+          "type": "number",
+          "minimum": 0
+        },
+        "automatic_left_cyst_volume_ml": {
+          "type": "number",
+          "minimum": 0
+        },
+        "automatic_right_cyst_volume_ml": {
+          "type": "number",
+          "minimum": 0
+        },
+        "labels_present": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "interactive_cyst": {
+      "type": "object",
+      "required": [
+        "user_point_xyz",
+        "laterality",
+        "class_label",
+        "class_name",
+        "laterality_margin_mm",
+        "selected_kidney_distance_mm",
+        "predicted_volume_ml",
+        "labels_present",
+        "contains_255_unprocessed"
+      ],
+      "properties": {
+        "user_point_xyz": {
+          "type": "array",
+          "prefixItems": [
+            {"type": "integer"},
+            {"type": "integer"},
+            {"type": "integer"}
+          ],
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "laterality": {
+          "enum": ["left", "right"]
+        },
+        "class_label": {
+          "enum": [116, 117]
+        },
+        "class_name": {
+          "type": "string"
+        },
+        "laterality_margin_mm": {
+          "type": "number",
+          "minimum": 0
+        },
+        "selected_kidney_distance_mm": {
+          "type": "number",
+          "minimum": 0
+        },
+        "predicted_volume_ml": {
+          "type": "number",
+          "minimum": 0
+        },
+        "labels_present": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "contains_255_unprocessed": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

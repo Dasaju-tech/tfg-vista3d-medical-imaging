@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo VISTA3D · $case</title>
+<style>
+  :root { color-scheme: dark; font-family: 'Segoe UI', sans-serif; color: #e6edf5; background: #080f19; }
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  main { width: min(1400px, 100%); margin: auto; padding: clamp(18px, 3vw, 48px); }
+  header { padding: 0 0 22px; border-bottom: 1px solid #314252; margin-bottom: 24px; }
+  h1 { margin: 0 0 8px; font-size: clamp(30px, 4.1vw, 53px); letter-spacing: -.05em; }
+  h2 { margin: 0 0 14px; font-size: 1.2rem; }
+  p { margin: 0; line-height: 1.55; }
+  .details { color: #aabacc; display: flex; gap: 10px 30px; flex-wrap: wrap; }
+  .details code { color: #7ce5d7; }
+  .grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 20px; margin-bottom: 20px; }
+  section { min-width: 0; border: 1px solid #26394a; border-radius: 14px; padding: 19px; background: #101c2a; }
+  .viewport { position: relative; background: #0b1522; border-radius: 8px; }
+  img { display: block; width: 100%; border-radius: 8px; }
+  canvas { width: 100%; height: 330px; display: block; cursor: grab; touch-action: none; border-radius: 8px; }
+  canvas:active { cursor: grabbing; }
+  :focus-visible { outline: 2px solid #7ce5d7; outline-offset: 3px; }
+  .hint { color: #aabacc; font-size: .85rem; margin-top: 10px; }
+  button { position: absolute; right: 10px; bottom: 10px; color: #e6edf5; background: #1b2b3a;
+           border: 1px solid #536579; border-radius: 5px; padding: 6px 10px; cursor: pointer; }
+  .table { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 9px 7px; border-bottom: 1px solid #26394a; font-size: .89rem; text-align: right; }
+  th:first-child { text-align: left; }
+  thead { color: #aabacc; }
+  tbody th { font-weight: 500; }
+  td { font-variant-numeric: tabular-nums; }
+  .swatch { width: 9px; height: 9px; margin-right: 7px; background: var(--label); display: inline-block; border-radius: 50%; }
+  .status { font-size: .9rem; margin-bottom: 13px; font-weight: 650; }
+  .accepted { color: #7ce5d7; }
+  .fallback { color: #ffd58a; }
+  .report { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.55; color: #d7e2ee; }
+  footer { display: flex; gap: 12px 20px; flex-wrap: wrap; font-size: .88rem; }
+  a { color: #85dcd9; }
+  @media (max-width: 920px) { .grid { grid-template-columns: 1fr; } canvas { height: 300px; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Del TAC al informe</h1>
+    <div class="details"><code>$case</code><span>VISTA3D / NV-Segment-CT · Qwen3 local</span><span>Prototipo de investigación</span></div>
+  </header>
+  <div class="grid">
+    <section aria-labelledby="ct">
+      <h2 id="ct">Cortes del TAC y contornos</h2>
+      <img src="tac.png" alt="Cortes sagital, coronal y axial con contornos segmentados y el punto de referencia">
+      <p class="hint">Punto en vóxeles del TAC original. $point</p>
+    </section>
+    <section aria-labelledby="view">
+      <h2 id="view">Vista 3D de las máscaras</h2>
+      <div class="viewport">
+        <canvas id="surface" tabindex="0" aria-label="Vista 3D de los bordes segmentados. Usa las flechas para girar."></canvas>
+        <button id="reset" type="button">Restablecer</button>
+      </div>
+      <p class="hint">Arrastra o usa las flechas para girar. La vista muestra puntos muestreados del borde de cada máscara.</p>
+    </section>
+  </div>
+  <div class="grid">
+    <section aria-labelledby="measures">
+      <h2 id="measures">Medidas de las máscaras</h2>
+      <div class="table"><table>
+        <thead><tr><th scope="col">Estructura</th><th scope="col">Volumen (mL)</th><th scope="col">Componentes</th><th scope="col">Diagonal de la caja (mm)</th></tr></thead>
+        <tbody>$rows</tbody>
+      </table></div>
+      <p class="hint">La caja abarca todos los componentes de la máscara indicada.</p>
+    </section>
+    <section aria-labelledby="clinical-report">
+      <h2 id="clinical-report">Informe de investigación</h2>
+      <p class="status $state">$status</p>
+      <p class="report" lang="en">$report</p>
+    </section>
+  </div>
+  <footer aria-label="Evidencias del caso">
+    <a href="findings.json">Datos del informe</a>
+    <a href="morphology.json">Medidas completas</a>
+    <a href="published_report.txt">Informe en texto</a>
+    $audit_link
+    <a href="$automatic_mask">Máscara automática</a>
+    <a href="guided/prediction.nii.gz">Máscara por punto</a>
+    <a href="demo.json">Proveniencia</a>
+  </footer>
+</main>
+<script>
+  const groups = $cloud;
+  const scene = document.getElementById('surface');
+  const ctx = scene.getContext('2d');
+  const extent = [0, 1, 2].map(axis => {
+    const values = groups.flatMap(group => group.points.map(point => point[axis]));
+    return values.length ? [Math.min(...values), Math.max(...values)] : [0, 0];
+  });
+  const center = extent.map(([lo, hi]) => (lo + hi) / 2);
+  const points = groups.flatMap(group => group.points.map(([x,y,z]) =>
+    [x-center[0], y-center[1], z-center[2], group.color]));
+  const span = Math.max(1, Math.hypot(...extent.map(([lo, hi]) => hi - lo)));
+  let yaw = .35, pitch = .16, pointer = null;
+  function draw() {
+    if (!ctx) return;
+    const {width, height} = scene.getBoundingClientRect();
+    const ratio = Math.min(2, devicePixelRatio);
+    scene.width = Math.round(width * ratio);
+    scene.height = Math.round(height * ratio);
+    ctx.scale(ratio, ratio);
+    ctx.fillStyle = '#0b1522'; ctx.fillRect(0, 0, width, height);
+    if (!points.length) {
+      ctx.fillStyle = '#aabacc'; ctx.font = '14px sans-serif'; ctx.textAlign = 'center';
+      ctx.fillText('Máscaras sin superficie para mostrar', width / 2, height / 2);
+      return;
+    }
+    const scale = .87 * Math.min(width, height) / span;
+    const cosYaw = Math.cos(yaw), sinYaw = Math.sin(yaw);
+    const cosPitch = Math.cos(pitch), sinPitch = Math.sin(pitch);
+    const projected = points.map(([x,y,z,color]) => {
+      const u = x * cosYaw - y * sinYaw, depth = x * sinYaw + y * cosYaw;
+      return [u, z * cosPitch - depth * sinPitch, depth * cosPitch + z * sinPitch, color];
+    }).sort((a,b) => a[2] - b[2]);
+    ctx.globalAlpha = .8;
+    for (const [x,y,z,color] of projected) {
+      ctx.fillStyle = color;
+      ctx.fillRect(width / 2 + x * scale, height / 2 - y * scale, 2, 2);
+    }
+  }
+  scene.addEventListener('pointerdown', event => {
+    pointer = [event.clientX, event.clientY];
+    scene.setPointerCapture(event.pointerId);
+  });
+  scene.addEventListener('pointermove', event => {
+    if (!pointer) return;
+    yaw += (event.clientX - pointer[0]) * .012;
+    pitch += (event.clientY - pointer[1]) * .012;
+    pointer = [event.clientX, event.clientY];
+    draw();
+  });
+  for (const kind of ['pointerup', 'pointercancel', 'lostpointercapture']) {
+    scene.addEventListener(kind, () => { pointer = null; });
+  }
+  scene.addEventListener('keydown', event => {
+    const arrows = {ArrowLeft: [-.15,0], ArrowRight: [.15,0], ArrowUp: [0,-.15], ArrowDown: [0,.15]};
+    const delta = arrows[event.key];
+    if (!delta) return;
+    event.preventDefault(); yaw += delta[0]; pitch += delta[1]; draw();
+  });
+  document.getElementById('reset').addEventListener('click', () => { yaw = .35; pitch = .16; draw(); });
+  new ResizeObserver(draw).observe(scene);
+  draw();
+</script>
+</body>
+</html>

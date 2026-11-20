@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vista3d-tfg.local/schemas/llm_candidate_report_v1.schema.json",
+  "title": "VISTA3D TFG LLM Candidate Report",
+  "type": "object",
+  "required": [
+    "case_id",
+    "narrative",
+    "limitations"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "pattern": "^case_[0-9]{5}$"
+    },
+    "narrative": {
+      "type": "string",
+      "minLength": 1
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

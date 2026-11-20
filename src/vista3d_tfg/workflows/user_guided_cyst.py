@@ -225,21 +225,24 @@ def run_user_guided_cyst_segmentation(
     environment_name: str = DEFAULT_RUNTIME_ENV,
     force: bool = False,
     runner: Runner = subprocess.run,
+    automatic_prediction_path: Path | None = None,
+    output_directory: Path | None = None,
 ) -> UserGuidedCystResult:
     paths = pilot_case_paths(project_root, case_number)
+    automatic_prediction = automatic_prediction_path or paths.prediction_path
 
-    if not paths.prediction_path.is_file():
+    if not automatic_prediction.is_file():
         raise FileNotFoundError(
             "Automatic renal prediction is required before the user-guided "
-            f"workflow: {paths.prediction_path}"
+            f"workflow: {automatic_prediction}"
         )
 
     assignment = assign_from_prediction_file(
-        automatic_prediction_path=paths.prediction_path,
+        automatic_prediction_path=automatic_prediction,
         point_xyz=point_xyz,
     )
 
-    output_root = (
+    output_root = output_directory or (
         project_root
         / "outputs"
         / "predictions"
@@ -333,7 +336,7 @@ def run_user_guided_cyst_segmentation(
                     "case_id": paths.case_id,
                     "image_path": str(paths.imaging_path),
                     "automatic_renal_prediction_path": str(
-                        paths.prediction_path
+                        automatic_prediction
                     ),
                     "user_point_xyz": list(point_xyz),
                 },

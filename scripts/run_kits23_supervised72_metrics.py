@@ -34,10 +34,16 @@ from scipy.spatial import cKDTree
 LABELS = {'kidney': (1,), 'tumor': (2,), 'cyst': (3,), 'renal_envelope': (1, 2, 3)}
 DISTANCES = tuple(f'{metric}_{norm}_mm' for norm in ('euclidean', 'manhattan')
                   for metric in ('hd', 'hd95', 'assd'))
-REVISION = 'block72-native-ras-surfaces-v1'
+REVISION = 'block72-native-ras-surfaces-v2'
+NATIVE_AFFINE_ATOL = 1e-5
 DEFINITION = {
     'surface': 'centers of foreground voxels removed by 6-connected binary erosion; outside image is background',
     'geometry': 'original NIfTI voxel coordinates transformed by full affine to physical RAS mm; obliquity/shear preserved',
+    'spatial_units': (
+        'Require matching CT and reference grids. An explicit mm unit in either header '
+        'applies to the shared grid. If both headers omit the unit, use the mm convention '
+        'of the frozen KiTS23 preprocessing. Reject explicit non-mm units.'
+    ),
     'euclidean': 'exact cKDTree nearest-neighbor query p=2, eps=0, workers=1',
     'manhattan': 'exact cKDTree nearest-neighbor query p=1, eps=0, workers=1; L1 in fixed world RAS axes, orientation dependent',
     'hd': 'maximum of both directed distance arrays',
@@ -58,6 +64,29 @@ def check_affine(affine):
     if abs(np.linalg.det(a[:3, :3])) < 1e-12:
         raise ValueError('Singular affine.')
     return a
+
+
+def native_geometry_mm(image, reference):
+    ct_unit = image.header.get_xyzt_units()[0]
+    reference_unit = reference.header.get_xyzt_units()[0]
+    if ct_unit not in ('mm', 'unknown') or reference_unit not in ('mm', 'unknown'):
+        raise ValueError(
+            f'Unsupported NIfTI spatial units for the frozen KiTS23 mm grid '
+            f'(CT={ct_unit}, reference={reference_unit}).'
+        )
+    if len(image.shape) != 3 or min(image.shape) < 1 or image.shape != reference.shape:
+        raise ValueError(f'CT/reference native shape mismatch ({image.shape} vs {reference.shape}).')
+    affine = check_affine(image.affine)
+    if not np.allclose(affine, check_affine(reference.affine), atol=NATIVE_AFFINE_ATOL, rtol=0):
+        raise ValueError('CT/reference native affine mismatch.')
+
+    return {
+        'shape': list(image.shape),
+        'voxel_spacing_mm': np.linalg.norm(affine[:3, :3], axis=0).tolist(),
+        'ct_spatial_unit': ct_unit,
+        'reference_spatial_unit': reference_unit,
+        'unit_source': 'nifti_header' if 'mm' in (ct_unit, reference_unit) else 'kits23_preprocessing',
+    }
 
 
 def surface_points(mask, affine):
@@ -206,9 +235,22 @@ def execute(root, args):
         index = m.verify_index(root, parent, plan)
         arms = m.ARMS if args.arm == 'both' else (args.arm,)
         selected = selected_records(root, m, plan, index, arms)
+        validation_ids = plan['partition']['validation']['case_ids']
+        validation_geometry = {}
+        for cid in validation_ids:
+            image_path, reference_path = m.c.case_paths(root, index.plan, 'validation', cid)
+            try:
+                validation_geometry[cid] = native_geometry_mm(nib.load(image_path), nib.load(reference_path))
+            except (KeyError, ValueError) as exc:
+                raise ValueError(f'{cid}: {exc}') from exc
+        header_mm = sum(geometry['unit_source'] == 'nifti_header' for geometry in validation_geometry.values())
+        print(f'Validation NIfTI geometry: {len(validation_geometry)}/{len(validation_ids)} aligned; '
+              f'mm from NIfTI headers: {header_mm}; mm from KiTS23 preprocessing: {len(validation_ids) - header_mm}.',
+              flush=True)
+
         protocol = {'revision': REVISION, 'source_experiment_sha256': plan['experiment_sha256'],
                     'selected': {arm: item['selection'] for arm, item in selected.items()},
-                    'validation_case_ids': plan['partition']['validation']['case_ids'],
+                    'validation_case_ids': validation_ids, 'validation_native_geometry': validation_geometry,
                     'definition': DEFINITION, 'runtime': plan['runtime'], 'test_reads': False,
                     'implementation': {name: hashlib.sha256((root / 'scripts' / name).read_bytes()).hexdigest()
                                        for name in ('run_kits23_supervised72_metrics.py', 'run_kits23_supervised71_resume_io.py',
@@ -269,6 +311,10 @@ def execute(root, args):
                     print(f'{arm} extra metrics [{number:03d}/080] {cid}', flush=True)
                     started = time.perf_counter()
                     image, meta = index.load('validation', cid)
+                    _, gt_path = m.c.case_paths(root, index.plan, 'validation', cid)
+                    reference = nib.load(gt_path)
+                    if not np.allclose(reference.affine, meta['original_affine'], atol=NATIVE_AFFINE_ATOL, rtol=0):
+                        raise ValueError(f'{cid}: Reference/native-grid affine mismatch.')
                     edge = None
                     edge_path = casefolder / 'edge_work.npy'
                     try:
@@ -281,12 +327,6 @@ def execute(root, args):
                         if edge is not None:
                             edge._mmap.close()
                         edge_path.unlink(missing_ok=True)
-                    _, gt_path = m.c.case_paths(root, index.plan, 'validation', cid)
-                    reference = nib.load(gt_path)
-                    if reference.header.get_xyzt_units()[0] != 'mm':
-                        raise ValueError('Native NIfTI spatial units must be mm for these distance labels.')
-                    if not np.allclose(reference.affine, meta['original_affine'], atol=1e-5, rtol=0):
-                        raise ValueError('Reference/native-grid affine mismatch.')
                     ground_truth = np.asanyarray(reference.dataobj)
                     if ground_truth.shape != predicted.shape:
                         raise ValueError('Reference/prediction grid mismatch.')

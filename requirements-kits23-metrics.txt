@@ -1,0 +1,2 @@
+# Reference surface-distance implementation used by the official KiTS23 evaluator.
+surface-distance @ git+https://github.com/deepmind/surface-distance.git
